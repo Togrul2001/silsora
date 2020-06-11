@@ -26,4 +26,10 @@ while True:
     # if time=="2123":
     #     work()
     #     print("currency file changed")
+    # minute = datetime.datetime.now().minute
+    # hour = datetime.datetime.now().hour
+    # time =str(hour) +  str(minute)
+    # if time=="2123":
+    #     work()
+    #     print("currency file changed")
     work()
