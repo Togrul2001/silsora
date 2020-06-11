@@ -9,6 +9,12 @@ def getObject():
             file.close()
             obyekt=json.loads(data)
             return obyekt
+def getCurrency():
+     with open("currency.json","r") as file:
+            data=file.read()
+            file.close()
+            obyekt=json.loads(data)
+            return obyekt
 @app.errorhandler(404)
 def error404(error):
     return render_template("404.html")
@@ -157,5 +163,9 @@ def index():
     aCar=random.randint(1,len(obyekt))
     print("random a car",aCar)
     return render_template("index.html",cars=obyekt,aCar=aCar)
+@app.route("/currency")
+def currency():
+    kurrenc=getCurrency()
+    return "{}".format(kurrenc)
 if __name__=="__main__":
     app.run(debug=True)

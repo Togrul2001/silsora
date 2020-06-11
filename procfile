@@ -1,2 +1,3 @@
+worker: python forJson.py
 web: gunicorn app:app
 heroku ps:scale web=1
