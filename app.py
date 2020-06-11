@@ -1,5 +1,6 @@
 from flask import Flask,render_template,url_for,request
 import json
+import random
 from datetime import date
 app = Flask(__name__)
 def getObject():
@@ -152,6 +153,9 @@ def wewillcallyou():
         return render_template("404.html")
 @app.route("/")
 def index():
-    return render_template("index.html")
+    obyekt=getObject()
+    aCar=random.randint(1,len(obyekt))
+    print("random a car",aCar)
+    return render_template("index.html",cars=obyekt,aCar=aCar)
 if __name__=="__main__":
     app.run(debug=True)

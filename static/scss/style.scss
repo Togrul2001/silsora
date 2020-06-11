@@ -96,7 +96,6 @@ body{
 }
 
 #calc-result {
-    padding: 36px;
    
     h1 {
         font-size: 28px;
@@ -115,7 +114,7 @@ body{
       
       .columns {
         margin: 0 auto;
-        max-width: 900px;
+        max-width: 687px;
       }
       
       .details {
@@ -668,6 +667,9 @@ body{
     #a-car .asagi ul {
         float: none;
     }
+    #calc-result .columns{
+        max-width: 400px;
+    }
 
 
 }
@@ -677,6 +679,9 @@ body{
             width: 78%;
         }
      
+    }
+    #calc-result .columns{
+        max-width: 296px;
     }
 
 
@@ -693,6 +698,9 @@ body{
     }
     #a-car .asagi ul li{
         font-size: 14px;
+    }
+    #calc-result .columns{
+        max-width: 227px;
     }
 
 }

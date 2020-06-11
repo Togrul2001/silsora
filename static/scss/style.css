@@ -2263,7 +2263,6 @@ body {
 }
 
 #calc-result {
-  padding: 36px;
   width: 100vw;
   position: absolute;
   background: rgba(0, 0, 0, 0.95);
@@ -2287,7 +2286,7 @@ body {
 
 #calc-result .columns {
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 687px;
 }
 
 #calc-result .details {
@@ -2871,11 +2870,17 @@ body {
   #a-car .asagi ul {
     float: none;
   }
+  #calc-result .columns {
+    max-width: 400px;
+  }
 }
 
 @media only screen and (max-width: 450px) {
   #banner div img {
     width: 78%;
+  }
+  #calc-result .columns {
+    max-width: 296px;
   }
 }
 
@@ -2888,6 +2893,9 @@ body {
   }
   #a-car .asagi ul li {
     font-size: 14px;
+  }
+  #calc-result .columns {
+    max-width: 227px;
   }
 }
 

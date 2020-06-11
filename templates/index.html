@@ -4,46 +4,49 @@
 {% include "head.html" %}
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-  
+
   {% include "loader.html" %}
 
   <div class="site-wrap" id="home-section">
 
-  {% include "menu.html" %}
+    {% include "menu.html" %}
 
-    <div class="ftco-blocks-cover-1">
+    {% if aCar %}
+    {% for car in cars %}
+    {% if car['id']==aCar %}
+     <div class="ftco-blocks-cover-1">
       <div class="ftco-cover-1 overlay"
         style="background-image: url('{{ url_for('static',filename='images/hero_1.jpg') }}');">
         <div class="container">
           <div class="row align-items-center">
             <div class="col-lg-5">
               <div class="feature-car-rent-box-1">
-                <h3>Range Rover S7</h3>
+                <h3>{{car['car_name']}}</h3>
                 <ul class="list-unstyled">
                   <li>
                     <span>Doors</span>
-                    <span class="spec">4</span>
+                    <span class="spec">{{car['car_name']}}</span>
                   </li>
                   <li>
                     <span>Seats</span>
-                    <span class="spec">6</span>
+                    <span class="spec">{{car['seat']}}</span>
                   </li>
                   <li>
                     <span>Lugage</span>
-                    <span class="spec">2 Suitcase/2 Bags</span>
+                    <span class="spec">{{car['bagage']}}2 Bags</span>
                   </li>
                   <li>
                     <span>Transmission</span>
-                    <span class="spec">Automatic</span>
+                    <span class="spec">{{car['transmision']}}</span>
                   </li>
                   <li>
-                    <span>Minium age</span>
-                    <span class="spec">Automatic</span>
+                    <span>Year</span>
+                    <span class="spec">{{car['year']}}</span>
                   </li>
                 </ul>
                 <div class="d-flex align-items-center bg-light p-3">
-                  <span>$150/day</span>
-                  <a href="{{ url_for('contact') }}" class="ml-auto btn btn-primary">Rent Now</a>
+                  <span>${{car['days']['2_3']}}/day</span>
+                  <a href="{{ url_for('car',id=car['id'])}}" class="ml-auto btn btn-primary">Rent Now</a>
                 </div>
               </div>
             </div>
@@ -51,6 +54,54 @@
         </div>
       </div>
     </div>
+    
+   
+      
+    {% endif %}
+    {% endfor %}
+    {% else %}
+    
+    <div class="ftco-blocks-cover-1">
+      <div class="ftco-cover-1 overlay"
+        style="background-image: url('{{ url_for('static',filename='images/hero_1.jpg') }}');">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-5">
+              <div class="feature-car-rent-box-1">
+                <h3>{{cars[0]['car_name']}}</h3>
+                <ul class="list-unstyled">
+                  <li>
+                    <span>Doors</span>
+                    <span class="spec">{{cars[0]['car_name']}}</span>
+                  </li>
+                  <li>
+                    <span>Seats</span>
+                    <span class="spec">{{cars[0]['seat']}}</span>
+                  </li>
+                  <li>
+                    <span>Lugage</span>
+                    <span class="spec">{{cars[0]['bagage']}}2 Bags</span>
+                  </li>
+                  <li>
+                    <span>Transmission</span>
+                    <span class="spec">{{cars[0]['transmision']}}</span>
+                  </li>
+                  <li>
+                    <span>Year</span>
+                    <span class="spec">{{cars[0]['year']}}</span>
+                  </li>
+                </ul>
+                <div class="d-flex align-items-center bg-light p-3">
+                  <span>${{cars[0]['days']['2_3']}}/day</span>
+                  <a href="{{ url_for('car',id=car['id'])}}" class="ml-auto btn btn-primary">Rent Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
 
 
     <div class="site-section bg-light">
@@ -72,70 +123,42 @@
 
 
             <div class="nonloop-block-13 owl-carousel">
+
+              {% for car in cars %}
               <div class="item-1">
-                <a href="#"><img src="{{ url_for('static',filename='images/img_1.jpg') }}" alt="Image"
+                <a href="#"><img src="{{ url_for('static',filename=car['photo_links']) }}" alt="Image"
                     class="img-fluid"></a>
                 <div class="item-1-contents">
                   <div class="text-center">
-                    <h3><a href="#">Range Rover S64 Coupe</a></h3>
-                    <div class="rent-price"><span>$250/</span>day</div>
+                    <h3><a href="#">{{car['car_name']}} </a></h3>
+                    <div class="rent-price"><span>${{car['days']['2_3']}}/</span>day</div>
                   </div>
                   <ul class="specs">
                     <li>
                       <span>Doors</span>
-                      <span class="spec">4</span>
+                      <span class="spec">{{car['doors']}}</span>
                     </li>
                     <li>
                       <span>Seats</span>
-                      <span class="spec">5</span>
+                      <span class="spec">{{car['seat']}}</span>
                     </li>
                     <li>
                       <span>Transmission</span>
-                      <span class="spec">Automatic</span>
+                      <span class="spec">{{car['transmision']}}</span>
                     </li>
                     <li>
-                      <span>Minium age</span>
-                      <span class="spec">18 years</span>
+                      <span>Year</span>
+                      <span class="spec">{{car['year']}}</span>
                     </li>
                   </ul>
                   <div class="d-flex action">
-                    <a href="{{ url_for('contact') }} " class="btn btn-primary">Rent Now</a>
+                    <a href="{{ url_for('car',id=car['id'])}}" class="btn btn-primary">Rent Now</a>
                   </div>
                 </div>
               </div>
+              {% endfor  %}
 
-
-              <div class="item-1">
-                <a href="#"><img src="{{ url_for('static',filename='images/img_2.jpg') }}" alt="Image"
-                    class="img-fluid"></a>
-                <div class="item-1-contents">
-                  <div class="text-center">
-                    <h3><a href="#">Range Rover S64 Coupe</a></h3>
-                    <div class="rent-price"><span>$250/</span>day</div>
-                  </div>
-                  <ul class="specs">
-                    <li>
-                      <span>Doors</span>
-                      <span class="spec">4</span>
-                    </li>
-                    <li>
-                      <span>Seats</span>
-                      <span class="spec">5</span>
-                    </li>
-                    <li>
-                      <span>Transmission</span>
-                      <span class="spec">Automatic</span>
-                    </li>
-                    <li>
-                      <span>Minium age</span>
-                      <span class="spec">18 years</span>
-                    </li>
-                  </ul>
-                  <div class="d-flex action">
-                    <a href="{{ url_for('contact') }}" class="btn btn-primary">Rent Now</a>
-                  </div>
-                </div>
-              </div>
+             
 
             </div>
 
@@ -144,7 +167,8 @@
       </div>
     </div>
 
-    <div class="site-section section-3" style="background-image: url('{{ url_for('static',filename='images/hero_2.jpg') }}');">
+    <div class="site-section section-3"
+      style="background-image: url('{{ url_for('static',filename='images/hero_2.jpg') }}');">
       <div class="container">
         <div class="row">
           <div class="col-12 text-center mb-5">
@@ -200,7 +224,7 @@
 
 
 
-  {% include "footer.html" %}
+    {% include "footer.html" %}
 
   </div>
 
