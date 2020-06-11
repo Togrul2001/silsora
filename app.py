@@ -15,15 +15,15 @@ def getCurrency():
             file.close()
             obyekt=json.loads(data)
             return obyekt
-@app.errorhandler(404)
-def error404(error):
-    return render_template("404.html")
-@app.errorhandler(500)
-def error500(error):
-    return render_template("404.html")
-@app.errorhandler(403)
-def error500(error):
-    return render_template("404.html")
+# @app.errorhandler(404)
+# def error404(error):
+#     return render_template("404.html")
+# @app.errorhandler(500)
+# def error500(error):
+#     return render_template("404.html")
+# @app.errorhandler(403)
+# def error500(error):
+#     return render_template("404.html")
 @app.route("/cars")
 def cars():
     with open("cars.json","r") as file:
