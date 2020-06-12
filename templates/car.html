@@ -47,21 +47,21 @@
                     <p class="price">{{totalPrice}} $ for {{totalDays}} days </p>
 
                     <div id="inputs">
-                        <input required type="text" name="name" placeholder="Name " >
+                        <input required type="text" name="name" placeholder="Name ">
                         <input required type="email" name="mail" placeholder="E-Mail ">
-                        <input required type="tel" name="phone"   placeholder="Number to call " >
+                        <input required type="tel" name="phone" placeholder="Number to call ">
                     </div>
 
                     <div class="columns">
 
                         <div class="column" id="wishlist-container">
 
-                                <button type="submit"  class="button">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-heart"></i>
-                                    </span>
-                                    <span class="wishlist">Call You</span>
-                                </button>
+                            <button type="submit" class="button">
+                                <span class="icon is-small">
+                                    <i class="fas fa-heart"></i>
+                                </span>
+                                <span class="wishlist">Call You</span>
+                            </button>
 
                         </div>
 
@@ -175,7 +175,7 @@
                                     </form>
                                     <ul>
                                         <li>
-                                            <span>Car Type:</span><span>{{car['car_type']}}</span>
+                                            <span>Car Type:</span><span>{{car['car_type_level']}}</span>
 
                                         </li>
                                         <li>
@@ -212,10 +212,17 @@
                                             <span>km:</span><span>{{car['km']}} km</span>
 
                                         </li>
-                                        <li>
-                                            <span></span><span></span>
+                                        {% if car['wifi']==True%}  <li>
+                                           Wifi +
+                                        </li> {% endif %}
+                                        {% if car['gps']==True%}  <li>
+                                            GPS +
+                                         </li> {% endif %}
+                                         {% if car['bluetooth']==True%}  <li>
+                                            Bluetooth +
+                                         </li> {% endif %}
 
-                                        </li>
+
 
                                     </ul>
                                     <ul>
