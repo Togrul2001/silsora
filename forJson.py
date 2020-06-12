@@ -19,7 +19,10 @@ def work():
         deyer = deyer[:last]
         moneyList.append([pulVahidininAdi, deyer])
     saveMoney(moneyList)
-while True:
+
+
+if __name__=="__main__":
+    while True:
     # minute = datetime.datetime.now().minute
     # hour = datetime.datetime.now().hour
     # time =str(hour) +  str(minute)
@@ -32,4 +35,4 @@ while True:
     # if time=="2123":
     #     work()
     #     print("currency file changed")
-    work()
+        work()
