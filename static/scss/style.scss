@@ -20,9 +20,11 @@ $tgray:rgba(62, 62, 62, 0.9);
 html {
     overflow: hidden;
 }
-body{
+
+body {
     background: black;
 }
+
 #crash-car {
     width: 50%;
     right: 0;
@@ -76,6 +78,7 @@ body{
         transform: translate(-50%, -50%);
         width: 100%;
         text-align: center;
+
         .menu {
             ul {
                 li {
@@ -87,188 +90,210 @@ body{
         }
     }
 }
-.will-be-white{
-    color:white;
+
+.will-be-white {
+    color: white;
 }
+
 #calced {
     width: 100vw;
     height: 100vw;
     background: white;
     position: fixed;
 }
-#cars-lits{
-   .col-lg-4{
 
-            min-width: 300px;
-       
+#cars-lits {
+    .col-lg-4 {
+
+        min-width: 300px;
+
     }
 }
-#types-of-cars{
+
+#types-of-cars {
     width: 100%;
     min-height: 100px;
     margin-bottom: 50px;
-    button{
+
+    button {
         background: white;
         outline: none;
-        border:none;
+        border: none;
         border-radius: 10px;
         margin: 10px;
-        color:red;
-        border:1px solid red;
+        color: red;
+        border: 1px solid red;
         font-weight: bold;
         padding: 5px;
         text-transform: uppercase;
-        &:focus{
+
+        &:focus {
             background: red;
-            border:1px solid white;
-            color:white;
+            border: 1px solid white;
+            color: white;
 
         }
     }
 }
+
 #calc-result {
-   
+
     h1 {
         font-size: 28px;
         font-weight: 700;
         margin-bottom: 5px;
-      }
-      
-      .price {
+    }
+
+    .price {
         margin-bottom: 10px;
-      }
-      
-      .wrapper {
+    }
+
+    .wrapper {
         margin: 0 auto;
         width: 860px;
-      }
-      
-      .columns {
+    }
+
+    .columns {
         margin: 0 auto;
         max-width: 687px;
-      }
-      
-      .details {
+    }
+
+    .details {
         position: relative;
         width: 100%;
         height: 100%;
         float: left;
-      }
-      
-      .thumbnail-container {
+    }
+
+    .thumbnail-container {
         position: relative;
         width: 100%;
         height: 100%;
         text-align: center;
         float: left;
-        .drift-demo-trigger{
+
+        .drift-demo-trigger {
             width: 79%;
         }
-      }
-      
-      .price {
+    }
+
+    .price {
         font-size: 20px;
         color: #777474;
-      }
-      
-      .wishlist-container {
+    }
+
+    .wishlist-container {
         padding-left: 0;
-      }
-      
-      #header {
+    }
+
+    #header {
         width: 100%;
         text-align: center;
-        padding:41px;
+        padding: 41px;
         /*box-shadow: 0 10px 17px 0px #c0c0c0;*/
-      }
-      #header img {
+    }
+
+    #header img {
         max-width: 69px;
-      }
-      .text-input{
-          color:red;
-      }
-      #inputs{
+    }
+
+    .text-input {
+        color: red;
+    }
+
+    #inputs {
         width: 100%;
         min-height: 100px;
         text-align: center;
-        input{
+
+        input {
             padding-left: 10px;
             margin: 10px;
             border-radius: 10px;
             outline: none;
-            border:none;
-            color:red;
+            border: none;
+            color: red;
         }
-      }
-      .columns {
+    }
+
+    .columns {
         margin-top: 30px;
-      }
-      
-      .button {
+    }
+
+    .button {
         width: 100%;
         border-radius: 31px;
-      }
-      
-      .select, select {
+    }
+
+    .select,
+    select {
         width: 100%;
         border-radius: 0 !important;
-      }
-      
-      #wishlist-container {
+    }
+
+    #wishlist-container {
         padding-left: 0;
-      }
-      
-      #buy-container {
+    }
+
+    #buy-container {
         padding-right: 0;
-      }
-      
-      .small-text {
+    }
+
+    .small-text {
         font-size: 14px;
-      }
-      
-      .small-text span {
+    }
+
+    .small-text span {
         font-weight: bold;
-      }
-      
-      .buy-button {
+    }
+
+    .buy-button {
         background: red;
         color: white;
         border: none;
-      }
-      
-      .buy-button:hover, .buy-button:active, .buy-button:focus {
+    }
+
+    .buy-button:hover,
+    .buy-button:active,
+    .buy-button:focus {
         color: white;
         opacity: 0.9;
-      }
-      
-      a {
+    }
+
+    a {
         color: #ff6900;
-      }
-      a:hover {
+    }
+
+    a:hover {
         color: #ff6900;
         opacity: 0.8;
-      }
-      
-      @media only screen and (max-width: 769px) {
-      
-        #wishlist-container, #buy-container {
-          padding: 0 0 15px 0;
+    }
+
+    @media only screen and (max-width: 769px) {
+
+        #wishlist-container,
+        #buy-container {
+            padding: 0 0 15px 0;
         }
-      }
+    }
+
     width: 100vw;
     position: absolute;
     background: rgba(0, 0, 0, 0.95);
     z-index: 20;
-    .column{
-        .wishlist{
-            color:red;
+
+    .column {
+        .wishlist {
+            color: red;
         }
-        *{
+
+        * {
             font-weight: bold;
-            
-            color:white;
+
+            color: white;
         }
     }
+
     #title {
         position: absolute;
         font-weight: bolder;
@@ -322,7 +347,7 @@ body{
         border: none;
         outline: none;
         border-radius: 10px;
-        
+
         &:hover {
             background: red;
 
@@ -386,19 +411,20 @@ body{
         justify-content: center;
         position: relative;
 
-        .calc-button{
+        .calc-button {
             width: 35%;
             height: 50%;
             border: none;
             outline: none;
             border-radius: 10px;
             font-size: 100%;
-            color:red;
+            color: red;
+
             &:focus {
-                color:white;
+                color: white;
                 background: red;
 
-                
+
             }
         }
     }
@@ -698,39 +724,50 @@ body{
     #a-car .asagi ul {
         float: none;
     }
-    #calc-result .columns{
+
+    #calc-result .columns {
         max-width: 400px;
     }
 
 
 }
+
 @media only screen and (max-width: 450px) {
     #banner div {
-        img{
+        img {
             width: 78%;
         }
-     
+
     }
-    #calc-result .columns{
+
+    #calc-result .columns {
         max-width: 296px;
+    }
+
+    #a-car .asagi ul li {
+        font-size: 16px;
     }
 
 
 }
+
 @media only screen and (max-width: 350px) {
     #banner div {
-        img{
+        img {
             width: 59%;
         }
-     
+
     }
-    #calc-result #title{
+
+    #calc-result #title {
         font-size: 156%;
     }
-    #a-car .asagi ul li{
+
+    #a-car .asagi ul li {
         font-size: 14px;
     }
-    #calc-result .columns{
+
+    #calc-result .columns {
         max-width: 227px;
     }
 
@@ -756,7 +793,7 @@ body{
     position: absolute;
     max-height: 100%;
     display: flex;
-justify-content: center;
+    justify-content: center;
 }
 
 img {
@@ -844,4 +881,37 @@ img {
             color-stop(0.50, rgba(0, 0, 0, 0)),
             color-stop(0.55, rgba(0, 0, 0, 0)),
             color-stop(1.00, rgba(0, 0, 0, 0)));
+}
+
+#show-all {
+    width: 100%;
+    min-height: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background: #f6f5f5;
+    a {
+        position: absolute;
+        top: 50%;
+
+        button {
+            background: white;
+            outline: none;
+            color: red;
+            border-radius: 10px;
+            padding: 10px;
+            border: 1px solid red;
+            &:hover{
+                transition: 1s ease;
+                background: red;
+                color:white;
+            }
+            &:focus{
+
+                background: red;
+                color:white;
+            }
+        }
+    }
+
 }

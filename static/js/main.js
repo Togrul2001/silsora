@@ -342,6 +342,9 @@ jQuery(document).ready(function($) {
 		}
 	}
 	$("#calculateFunc").on("click",function(){
+		var ust=$("#a-car .asagi").offset().top;
+		document.body.scrollTop = ust;
+		document.documentElement.scrollTop = ust;
 		$("#calculateFunc").fadeOut();
 		$("#calculate").fadeIn(
 			function(){
@@ -360,7 +363,8 @@ jQuery(document).ready(function($) {
 	function(){
 		$("#calc-result").fadeOut();
 		$("#home-section").fadeIn();
-	
+		
+		
 	}
 	);
 	

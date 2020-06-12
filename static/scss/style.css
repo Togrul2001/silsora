@@ -2389,7 +2389,8 @@ body {
   border-radius: 31px;
 }
 
-#calc-result .select, #calc-result select {
+#calc-result .select,
+#calc-result select {
   width: 100%;
   border-radius: 0 !important;
 }
@@ -2416,7 +2417,9 @@ body {
   border: none;
 }
 
-#calc-result .buy-button:hover, #calc-result .buy-button:active, #calc-result .buy-button:focus {
+#calc-result .buy-button:hover,
+#calc-result .buy-button:active,
+#calc-result .buy-button:focus {
   color: white;
   opacity: 0.9;
 }
@@ -2431,7 +2434,8 @@ body {
 }
 
 @media only screen and (max-width: 769px) {
-  #calc-result #wishlist-container, #calc-result #buy-container {
+  #calc-result #wishlist-container,
+  #calc-result #buy-container {
     padding: 0 0 15px 0;
   }
 }
@@ -2915,6 +2919,9 @@ body {
   #calc-result .columns {
     max-width: 296px;
   }
+  #a-car .asagi ul li {
+    font-size: 16px;
+  }
 }
 
 @media only screen and (max-width: 350px) {
@@ -3016,5 +3023,44 @@ img {
   -webkit-animation-direction: alternate;
   -webkit-mask-size: 2000px 2000px;
   -webkit-mask-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, black), color-stop(0.45, black), color-stop(0.5, rgba(0, 0, 0, 0)), color-stop(0.55, rgba(0, 0, 0, 0)), color-stop(1, rgba(0, 0, 0, 0)));
+}
+
+#show-all {
+  width: 100%;
+  min-height: 100px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #f6f5f5;
+}
+
+#show-all a {
+  position: absolute;
+  top: 50%;
+}
+
+#show-all a button {
+  background: white;
+  outline: none;
+  color: red;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid red;
+}
+
+#show-all a button:hover {
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+  background: red;
+  color: white;
+}
+
+#show-all a button:focus {
+  background: red;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
