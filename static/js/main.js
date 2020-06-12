@@ -7,7 +7,7 @@
 jQuery(document).ready(function($) {
 
 	"use strict";
-
+	
 			
 	var siteMenuClone = function() {
 
@@ -363,6 +363,7 @@ jQuery(document).ready(function($) {
 	
 	}
 	);
+	
 	
 });
 // When the user clicks on the button, scroll to the top of the document

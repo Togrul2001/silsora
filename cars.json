@@ -2,6 +2,7 @@
         "id": 1,
         "car_name": "BMW x5",
         "car_type": "suv",
+        "car_type_level":"sport",
         "doors": 4,
         "seat": 7,
         "engine": 4.0,
@@ -13,8 +14,6 @@
             "16_30":35,
             "30_":30
         },
-        "eco": false,
-        "premium": true,
         "year": 2015,
         "bagage": 4,
         "wifi": true,
@@ -35,6 +34,7 @@
         "id": 2,
         "car_name": "Mercedes e class",
         "car_type": "sedan",
+        "car_type_level":"business",
         "doors": 4,
         "seat": 5,
         "engine": 3.0,
@@ -46,8 +46,6 @@
             "16_30":35,
             "30_":30
         },
-        "eco": true,
-        "premium": true,
         "year": 2020,
         "bagage": 3,
         "wifi": true,
@@ -68,6 +66,7 @@
         "id": 3,
         "car_name": "Kia Optima",
         "car_type": "sedan",
+        "car_type_level":"full-size",
         "doors": 4,
         "seat": 5,
         "engine": 2.0,
@@ -79,8 +78,6 @@
             "16_30":35,
             "30_":30
         },
-        "eco": true,
-        "premium": true,
         "year": 2017,
         "bagage": 4,
         "wifi": false,
@@ -100,12 +97,13 @@
 
     {
         "id": 4,
-        "car_name": "BMW x5",
+        "car_name": "Mercedes - Benz V class",
         "car_type": "suv",
-        "doors": 4,
-        "seat": 7,
-        "engine": 4.0,
-        "transmision": "automatic",
+        "car_type_level":"minivan",
+        "doors": 3,
+        "seat": 10,
+        "engine": 2.0,
+        "transmision": "Automatic",
         "days":{
             "2_3":50,
             "4_7":45,
@@ -113,15 +111,12 @@
             "16_30":35,
             "30_":30
         },
-        "eco": false,
-        "premium": true,
         "year": 2015,
-        "bagage": 4,
+        "bagage": 6 ,
         "wifi": true,
         "gps": true,
         "bluetooth": false,
         "oil": "disel",
-        "km": 1700,
         "photo_links": "images/cars/carid4.jpeg",
         "links": [
             "images/cars/carid1.jpeg",
@@ -130,11 +125,11 @@
             "images/cars/carid4.jpeg"
         ]
     },
-
     {
         "id": 5,
         "car_name": "Dodge Challenger",
-        "car_type": "suv",
+        "car_type": "Coupe",
+        "car_type_level":"sport",
         "doors": 2,
         "seat": 5,
         "engine": 3.5,
@@ -146,8 +141,6 @@
             "16_30":35,
             "30_":30
         },
-        "eco": false,
-        "premium": true,
         "year": 2015,
         "bagage": 4,
         "wifi": true,
@@ -167,6 +160,7 @@
         "id": 6,
         "car_name": "Niva Urban",
         "car_type": "suv",
+        "car_type_level":"economy",
         "doors": 4,
         "seat": 5,
         "engine": 2.5,
@@ -178,8 +172,6 @@
             "16_30":35,
             "30_":30
         },
-        "eco": true,
-        "premium": false,
         "year": 2010,
         "bagage": 4,
         "wifi": false,
@@ -199,6 +191,7 @@
         "id": 7,
         "car_name": "BMW 525i",
         "car_type": "suv",
+        "car_type_level":"business",
         "doors": 4,
         "seat": 5,
         "engine": 2.5,
@@ -210,8 +203,6 @@
             "16_30":35,
             "30_":30
         },
-        "eco": false,
-        "premium": true,
         "year": 2012,
         "bagage": 4,
         "wifi": true,

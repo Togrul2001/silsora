@@ -30,11 +30,22 @@
         <div class="row">
 
 
-          
+          <div id="types-of-cars" class="container">
+            <button onclick="filterSelection('all')" >all</button>
+            <button onclick="filterSelection('sport')" >sport</button>
+            <button onclick="filterSelection('business')" >business</button>
+            <button onclick="filterSelection('full-size')" >full-size</button>
+            <button onclick="filterSelection('minivan')" >minivan</button>
+            <button onclick="filterSelection('economy')" >economy</button>
 
+          </div>
+          <div id="cars-lits">
+            <div class="row">
           {%for car in cars%}
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="item-1">
+
+          
+          <div class="col-lg-4 col-md-6 mb-4 {{car['car_type_level']}}">
+            <div class="item-1 ">
              
               <a href="{{ url_for('car',id=car['id'])}}"><img src="{{ url_for('static', filename=car['photo_links'])}}" alt="ASRentACarLogo" class="img-fluid"></a>
               <div class="item-1-contents">
@@ -66,9 +77,10 @@
               </div>
             </div>
           </div>
+
           {% endfor %}
-
-
+</div>
+        </div>
          
         </div>
       </div>
