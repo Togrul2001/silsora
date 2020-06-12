@@ -2255,6 +2255,10 @@ body {
   font-weight: bold;
 }
 
+.will-be-white {
+  color: white;
+}
+
 #calced {
   width: 100vw;
   height: 100vw;
