@@ -33,7 +33,7 @@
                   </li>
                   <li>
                     <span>Lugage</span>
-                    <span class="spec">{{car['bagage']}}2 Bags</span>
+                    <span class="spec">{{car['bagage']}} Bags</span>
                   </li>
                   <li>
                     <span>Transmission</span>
@@ -104,11 +104,12 @@
     {% endif %}
 
 
-    <div id="show-all" class="container">
-      <a href="{{ url_for('cars') }}"><button>Show All Cars</button></a>
-    </div>
+   
     <div class="site-section bg-light">
       <div class="container">
+        <div id="show-all" class="container">
+          <a href="{{ url_for('cars') }}"><button>Show All Cars</button></a>
+        </div>
         <div class="row">
           <div class="col-lg-3">
             <h3>Our Offer</h3>
