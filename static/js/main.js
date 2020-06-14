@@ -140,17 +140,14 @@
  			} else {
 
  				try {
- 					var currencies = Cookies.get("allcurrencies");
- 					currencies = currencies.split(",")
- 					var sira = currencies.indexOf(currency)
- 					var secilenvalyuta = parseFloat(currencies[sira + 1]);
+					currencyValue=Cookies.get("currencyvalue");
  					$(".itiscurrency").each(
  						function () {
  							var pul = parseFloat($(this).text());
 
 
-
- 							$(this).text(" " + parseInt((pul / secilenvalyuta)) + " ");
+							
+ 							$(this).text(" " + parseInt((pul / parseFloat(currencyValue))) + " ");
 
  						}
  					);
