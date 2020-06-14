@@ -41,15 +41,15 @@ def getCurrency():
         work()
         result=getCurrency()
         return result
-# @app.errorhandler(404)
-# def error404(error):
-#     return render_template("404.html")
-# @app.errorhandler(500)
-# def error500(error):
-#     return render_template("404.html")
-# @app.errorhandler(403)
-# def error500(error):
-#     return render_template("404.html")
+@app.errorhandler(404)
+def error404(error):
+    return render_template("404.html")
+@app.errorhandler(500)
+def error500(error):
+    return render_template("404.html")
+@app.errorhandler(403)
+def error500(error):
+    return render_template("404.html")
 @app.route("/cars")
 def cars():
     pullar=getCurrency()

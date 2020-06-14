@@ -111,6 +111,7 @@
                 </li>
                 <li id="money"><a href="#" class="nav-link "> <select  class=" currency"onchange="changethemoney()" id="list" >
                     <option value="money">Money</option>
+                    <option value="AZN/0">AZN</option>
                       {% for money in moneys%}
                         <option value="{{money[0]+'/'+ money[1] }}"  >{{ money[0]}}</option>
                       {% endfor %}
