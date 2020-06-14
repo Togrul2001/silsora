@@ -7,8 +7,6 @@ jQuery(document).ready(function ($) {
         if (!isCurrencyChanged) {
             console.log("if (!isCurrencyChanged) {");
             $.getJSON('https://ipapi.co/json/', function (data) {
-                var currency = $("#money .currency").val();
-                var res = currency.split("/");
                 Cookies.set("currency", data.currency)
                 if(currencyvalue==null){
                     $.getJSON("../../static/currency/currency.json", function(json) {

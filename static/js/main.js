@@ -141,7 +141,10 @@
  			} else {
 
  				try {
- 					var currencyValue = Cookies.get("currencyvalue");
+					 var currencyValue = Cookies.get("currencyvalue");
+					 if (currencyValue==null){
+						 window.location.href=window.location.href;
+					 }
  					$(".itiscurrency").each(
  						function () {
  							var pul = parseFloat($(this).text());
