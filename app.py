@@ -1,5 +1,7 @@
-from flask import Flask,render_template,url_for,request
+from flask import Flask,render_template,url_for,jsonify,request
 import json
+import requests
+from bs4 import BeautifulSoup
 import random
 from datetime import date
 app = Flask(__name__)
@@ -9,12 +11,36 @@ def getObject():
             file.close()
             obyekt=json.loads(data)
             return obyekt
+def saveMoney(moneys):
+    with open("static/currency/currency.json","w") as file:
+        json.dump(moneys,file)
+def work():
+    soup = BeautifulSoup(requests.get("http://www.mezenne.az/").content, "html.parser")
+    trler = soup.findAll('tr', style="white-space: nowrap;")
+    moneyList = []
+    for i in trler:
+        children = i.findChildren("td", recursive=False)
+        pulVahidininAdi = str(children[2]).replace("<td>", "").replace("</td>", "")
+        deyer = str(children[3])
+        deyerFrom = deyer.find('placeholder="')
+        deyer = deyer[deyerFrom + 13:]
+        last = deyer.find('"')
+        deyer = deyer[:last]
+        moneyList.append([pulVahidininAdi, deyer])
+    saveMoney(moneyList)
 def getCurrency():
-     with open("currency.json","r") as file:
+    try:
+         with open("static/currency/currency.json","r") as file:
             data=file.read()
             file.close()
             obyekt=json.loads(data)
-            return obyekt
+            work()
+            return obyekt   
+    except Exception as ex:
+        print(ex)
+        work()
+        result=getCurrency()
+        return result
 # @app.errorhandler(404)
 # def error404(error):
 #     return render_template("404.html")
@@ -26,21 +52,26 @@ def getCurrency():
 #     return render_template("404.html")
 @app.route("/cars")
 def cars():
+    pullar=getCurrency()
     with open("cars.json","r") as file:
         data=file.read()
     obyekt=json.loads(data)
-    
-    return render_template("cars.html",cars=obyekt)
+    return render_template("cars.html",cars=obyekt,moneys=pullar)
 @app.route("/about")
 def about():
-    return render_template("about.html")    
+    pullar=getCurrency()
+    return render_template("about.html",moneys=pullar)    
+@app.route("/changemoney/<string:currency>")
+def changemoney(currency):
+    return "{}".format(currency)
 @app.route("/car/<int:id>")
 def car(id):
+    pullar=getCurrency()
     with open("cars.json","r") as file:
         data=file.read()
         file.close()
     obyekt=json.loads(data)
-    return render_template("car.html",id=id,cars=obyekt) 
+    return render_template("car.html",id=id,cars=obyekt,moneys=pullar) 
 def dataNowDays(picked):
     pick=str(picked).split("-")
     pickk=[]
@@ -130,6 +161,7 @@ def calPrice(pick,drop,baby,id,carss):
     
 @app.route("/calc/<int:id>",methods=["POST"])
 def calc(id):
+    pullar=getCurrency()
     if request.method=="POST":
         pick=request.form.get('pick')
         drop=request.form.get('drop')
@@ -138,10 +170,10 @@ def calc(id):
         res = cheking(pick,drop)
         if res[1] is False:
             error=res[0]
-            return render_template("car.html",id=id,cars=obyekt,error=error)
+            return render_template("car.html",id=id,cars=obyekt,moneys=pullar,error=error)
         else:
             totalPrice,totalDays,totalBaby=calPrice(pick,drop,baby,id,obyekt) 
-            return render_template("car.html",id=id,cars=obyekt,totalPrice=totalPrice,totalDays=totalDays,totalBaby=totalBaby) 
+            return render_template("car.html",id=id,cars=obyekt,moneys=pullar,totalPrice=totalPrice,totalDays=totalDays,totalBaby=totalBaby) 
         return render_template("car.html",id=id,cars=obyekt) 
         
     return render_template("404.html")
@@ -150,22 +182,25 @@ def contact():
     return render_template("contact.html")
 @app.route("/wewillcallyou",methods=["POST"])
 def wewillcallyou():
-        if request.method=="POST":
-            name=request.form.get('name')
-            mail=request.form.get('mail')
-            phone=request.form.get('phone')
-            obyekt=getObject()
-            return  render_template("cars.html",cars=obyekt,callyou=True)
-        return render_template("404.html")
+    pullar=getCurrency()
+    if request.method=="POST":
+        name=request.form.get('name')
+        mail=request.form.get('mail')
+        phone=request.form.get('phone')
+        obyekt=getObject()
+        return  render_template("cars.html",cars=obyekt,moneys=pullar,callyou=True)
+    return render_template("404.html")
 @app.route("/")
 def index():
+    pullar=getCurrency()
     obyekt=getObject()
     aCar=random.randint(1,len(obyekt))
     print("random a car",aCar)
-    return render_template("index.html",cars=obyekt,aCar=aCar)
+    return render_template("index.html",cars=obyekt,moneys=pullar,aCar=aCar)
+
 @app.route("/currency")
-def currency():
-    kurrenc=getCurrency()
-    return "{}".format(kurrenc)
+def getcur():
+    result=getCurrency()
+    return jsonify(result)
 if __name__=="__main__":
     app.run(debug=True)

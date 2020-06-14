@@ -129,6 +129,36 @@ jQuery(document).ready(function($) {
 			"overflow":"auto"
 		});
 		}, 0);
+		var currency=Cookies.get("currency")
+		console.log(currency);
+		$(".itiscurrencyname").each(
+			function(){
+				$(this).text(currency);
+			}
+		);
+		if(currency=="AZN"){
+			
+		}else{
+			
+			var currencies=Cookies.get("allcurrencies");
+			currencies=currencies.split(",")
+			var sira=currencies.indexOf(currency)
+			var secilenvalyuta=parseFloat(currencies[sira+1]);
+		
+			$(".itiscurrency").each(
+				function(){
+					var pul=parseInt($(this).text());
+					console.log("pul"+pul);
+					console.log("secilenvalyuta"+secilenvalyuta);
+
+					
+					
+					$(this).text(" "+(pul/secilenvalyuta).toFixed(3)+" ");
+	
+				}
+			);
+		}
+		
 	}
 	
 	);
@@ -269,13 +299,18 @@ jQuery(document).ready(function($) {
       e.preventDefault();
 
       var hash = this.hash;
-
-      $('html, body').animate({
+try{
+	
+	$('html, body').animate({
         'scrollTop': $(hash).offset().top - 50
       }, 600, 'easeInOutExpo', function() {
         // window.location.hash = hash;
 
       });
+}catch{
+	console.log(" islemedi  'scrollTop': $(hash).offset().top - 50");
+	
+}
 
     });
   };
@@ -367,11 +402,13 @@ jQuery(document).ready(function($) {
 		
 	}
 	);
-	
-	
+
+
 });
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
 	document.body.scrollTop = 0;
 	document.documentElement.scrollTop = 0;
 }
+
+

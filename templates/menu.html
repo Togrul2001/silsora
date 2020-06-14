@@ -109,12 +109,11 @@
                     </select> </a>
 
                 </li>
-                <li><a href="#" class="nav-link"> <select id="list">
-                      <option>Exchange</option>
-                      <option>Dollar</option>
-                      <option>Lira</option>
-                      <option>Manat</option>
-                      <option>Euro</option>
+                <li id="money"><a href="#" class="nav-link "> <select  class=" currency"onchange="changethemoney()" id="list" >
+                    <option value="money">Money</option>
+                      {% for money in moneys%}
+                        <option value="{{money[0]+'/'+ money[1] }}"  >{{ money[0]}}</option>
+                      {% endfor %}
                     </select> </a>
 
                 </li>

@@ -44,7 +44,7 @@
                 <div class="details">
                     <br>
                     <h1>{{car['car_name']}}{% if totalBaby %} + Baby seat {% endif%}</h1>
-                    <p class="price">{{totalPrice}} $ for {{totalDays}} days </p>
+                    <p class="price"><span class="itiscurrency">{{totalPrice}}     </span> <span class="itiscurrencyname">AZN</span>  for {{totalDays}} days </p>
 
                     <div id="inputs">
                         <input required type="text" name="name" placeholder="Name ">
@@ -144,7 +144,7 @@
 
                                             </li>
                                             <li>
-                                                <span>Baby Seat: 30$ </span>
+                                                <span>Baby Seat: <span class="itiscurrency">30   </span><span class="itiscurrencyname">AZN</span> </span>
 
                                             </li>
 
@@ -227,24 +227,24 @@
                                     </ul>
                                     <ul>
                                         <li>
-                                            <span>1-3 days : </span><span> {{car['days']['2_3']}} $ </span>
+                                            <span>1-3 days : </span><span> <span class="itiscurrency">{{car['days']['2_3']}}    </span><span class="itiscurrencyname">AZN</span>  </span>
 
                                         </li>
                                         <li>
-                                            <span>4-7 days .: </span><span> {{car['days']['4_7']}} $ </span>
+                                            <span>4-7 days .: </span><span> <span class="itiscurrency">{{car['days']['4_7']}}    </span><span class="itiscurrencyname">AZN</span> </span>
 
                                         </li>
                                         <li>
-                                            <span>8-15 days : </span><span> {{car['days']['8_15']}} $ </span>
+                                            <span>8-15 days : </span><span>  <span class="itiscurrency">{{car['days']['8_15']}}     </span><span class="itiscurrencyname">AZN</span>  </span>
 
                                         </li>
 
                                         <li>
-                                            <span>16-30 days : </span><span> {{car['days']['16_30']}} $ </span>
+                                            <span>16-30 days : </span><span> <span class="itiscurrency">{{car['days']['16_30']}}    </span> <span class="itiscurrencyname">AZN</span> </span>
 
                                         </li>
                                         <li>
-                                            <span>30 + days : </span><span> {{car['days']['30_']}} $ </span>
+                                            <span>30 + days : </span><span> <span class="itiscurrency">{{car['days']['30_']}}    </span> <span class="itiscurrencyname">AZN</span>  </span>
 
                                         </li>
 
