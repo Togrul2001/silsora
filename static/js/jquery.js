@@ -1,7 +1,7 @@
 jQuery(document).ready(function ($) {
     $.getJSON('https://ipapi.co/json/', function (data) {
 
-        var isCurrencyChanged = Cookies.get('isCurrencyhanged')
+        var isCurrencyChanged = Cookies.get('isCurrencyChanged')
 
         var currencyvalue=Cookies.get("currencyvalue");
         if (!isCurrencyChanged) {
@@ -22,7 +22,7 @@ jQuery(document).ready(function ($) {
 
                 }
               
-                Cookies.set("isCurrencyhanged", true)
+                Cookies.set("isCurrencyChanged", true)
             });
         } 
 
@@ -52,6 +52,6 @@ function changethemoney() {
     var res = currency.split("/");
     Cookies.set("currency", res[0])
     Cookies.set("currencyvalue", res[1])
-    Cookies.set("isCurrencyhanged", true)
+    Cookies.set("isCurrencyChanged", true)
     window.location.href = window.location.href;
 }
