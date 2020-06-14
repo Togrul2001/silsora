@@ -140,7 +140,7 @@
  			} else {
 
  				try {
-					currencyValue=Cookies.get("currencyvalue");
+					var currencyValue=Cookies.get("currencyvalue");
  					$(".itiscurrency").each(
  						function () {
  							var pul = parseFloat($(this).text());
@@ -153,8 +153,6 @@
  					);
  				} catch {
  					console.log("Somthing went wrong");
- 					window.location.href = window.location.href;
-
 
  				}
  			}
