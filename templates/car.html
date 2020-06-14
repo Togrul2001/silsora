@@ -194,7 +194,12 @@
 
                                         </li>
                                         <li>
-                                            <span>Transmision:</span><span>{{car['transmision']}}</span>
+                                            <span>Transmision:</span>
+                                            {%if car["transmision"]==0%}
+                                             <span class="spec">Automatic</span>
+                                             {% elif car["transmision"]==1%}
+                                            <span class="spec">Mechanic</span>
+                                            {%endif%}
 
                                         </li>
                                         <li>
@@ -205,7 +210,12 @@
                                     </ul>
                                     <ul>
                                         <li>
-                                            <span>oil:</span><span>{{car['oil']}}</span>
+                                            <span>oil:</span>
+                                            {%if car["transmision"]==0%}
+                                            <span class="spec">Gasoline</span>
+                                            {% elif car["transmision"]==1%}
+                                            <span class="spec">Disel</span>
+                                            {%endif%}
 
                                         </li>
                                         <li>

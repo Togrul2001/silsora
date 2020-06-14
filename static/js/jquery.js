@@ -51,5 +51,5 @@ function changethemoney() {
     Cookies.set("currency", res[0])
     Cookies.set("currencyvalue", res[1])
     Cookies.set("isCurrencyChanged", true)
-    window.location.href = window.location.href;
+    window.location.href = "/";
 }

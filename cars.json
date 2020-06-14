@@ -6,7 +6,7 @@
         "doors": 4,
         "seat": 7,
         "engine": 4.0,
-        "transmision": "automatic",
+        "transmision": 0,
         "days":{
             "2_3":50,
             "4_7":45,
@@ -19,7 +19,7 @@
         "wifi": true,
         "gps": true,
         "bluetooth": false,
-        "oil": "disel",
+        "oil": 1,
         "km": 1700,
         "photo_links": "images/cars/carid1.jpeg",
         "links": [
@@ -38,7 +38,7 @@
         "doors": 4,
         "seat": 5,
         "engine": 3.0,
-        "transmision": "mechanic",
+        "transmision": 1,
         "days":{
             "2_3":50,
             "4_7":45,
@@ -70,7 +70,7 @@
         "doors": 4,
         "seat": 5,
         "engine": 2.0,
-        "transmision": "mechanic",
+        "transmision": 1,
         "days":{
             "2_3":50,
             "4_7":45,
@@ -103,7 +103,7 @@
         "doors": 3,
         "seat": 10,
         "engine": 2.0,
-        "transmision": "Automatic",
+        "transmision": 0,
         "days":{
             "2_3":50,
             "4_7":45,
@@ -116,7 +116,7 @@
         "wifi": true,
         "gps": true,
         "bluetooth": false,
-        "oil": "disel",
+        "oil": 1,
         "photo_links": "images/cars/carid4.jpeg",
         "links": [
             "images/cars/carid1.jpeg",
@@ -133,7 +133,7 @@
         "doors": 2,
         "seat": 5,
         "engine": 3.5,
-        "transmision": "automatic",
+        "transmision": 0,
         "days":{
             "2_3":50,
             "4_7":45,
@@ -146,7 +146,7 @@
         "wifi": true,
         "gps": true,
         "bluetooth": false,
-        "oil": "disel",
+        "oil": 1,
         "km": 1700,
         "photo_links": "images/cars/carid5.jpeg",
         "links": [
@@ -164,7 +164,7 @@
         "doors": 4,
         "seat": 5,
         "engine": 2.5,
-        "transmision": "mechanic",
+        "transmision": 1,
         "days":{
             "2_3":50,
             "4_7":45,
@@ -177,7 +177,7 @@
         "wifi": false,
         "gps": false,
         "bluetooth": true,
-        "oil": "disel",
+        "oil": 1,
         "km": 1700,
         "photo_links": "images/cars/carid6.jpeg",
         "links": [
@@ -195,7 +195,7 @@
         "doors": 4,
         "seat": 5,
         "engine": 2.5,
-        "transmision": "automatic",
+        "transmision": 0,
         "days":{
             "2_3":50,
             "4_7":45,
@@ -207,7 +207,7 @@
         "bagage": 4,
         "wifi": true,
         "gps": true,
-        "oil": "disel",
+        "oil": 1,
         "km": 1700,
         "bluetooth": true,
         "photo_links": "images/cars/carid7.jpeg",

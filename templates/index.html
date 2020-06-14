@@ -37,7 +37,11 @@
                   </li>
                   <li>
                     <span>Transmission</span>
-                    <span class="spec">{{car['transmision']}}</span>
+                    {%if car["transmision"]==0%}
+                    <span class="spec">Automatic</span>
+                    {% elif car["transmision"]==1%}
+                    <span class="spec">Mechanic</span>
+                    {%endif%}
                   </li>
                   <li>
                     <span>Year</span>
@@ -84,7 +88,11 @@
                   </li>
                   <li>
                     <span>Transmission</span>
-                    <span class="spec">{{cars[0]['transmision']}}</span>
+                    {%if car["transmision"]==0%}
+                    <span class="spec">Automatic</span>
+                    {% elif car["transmision"]==1%}
+                    <span class="spec">Mechanic</span>
+                    {%endif%}
                   </li>
                   <li>
                     <span>Year</span>
@@ -147,7 +155,11 @@
                     </li>
                     <li>
                       <span>Transmission</span>
-                      <span class="spec">{{car['transmision']}}</span>
+                      {%if car["transmision"]==0%}
+                    <span class="spec">Automatic</span>
+                    {% elif car["transmision"]==1%}
+                    <span class="spec">Mechanic</span>
+                    {%endif%}
                     </li>
                     <li>
                       <span>Year</span>
