@@ -128,7 +128,8 @@
  				$("html").css({
  					"overflow": "auto"
  				});
- 			}, 0);
+			 }, 0);
+			
  			var currency = Cookies.get("currency")
  			$(".itiscurrencyname").each(
  				function () {
@@ -140,13 +141,13 @@
  			} else {
 
  				try {
-					var currencyValue=Cookies.get("currencyvalue");
+ 					var currencyValue = Cookies.get("currencyvalue");
  					$(".itiscurrency").each(
  						function () {
  							var pul = parseFloat($(this).text());
 
 
-							
+
  							$(this).text(" " + parseInt((pul / parseFloat(currencyValue))) + " ");
 
  						}
