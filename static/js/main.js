@@ -9,6 +9,7 @@
  	"use strict";
 
 
+
  	var siteMenuClone = function () {
 
  		$('.js-clone-nav').each(function () {
@@ -121,49 +122,6 @@
  	};
  	// siteSliderRange();
 
- 	$(window).on('load',
- 		function () {
- 			setInterval(() => {
- 				$("#loading").fadeOut("slow");
- 				$("html").css({
- 					"overflow": "auto"
- 				});
-			 }, 0);
-			
- 			var currency = Cookies.get("currency")
- 			$(".itiscurrencyname").each(
- 				function () {
- 					$(this).text(currency);
- 				}
- 			);
- 			if (currency == "AZN") {
-
- 			} else {
-
- 				try {
-					 var currencyValue = Cookies.get("currencyvalue");
-					 if (currencyValue==null){
-						 window.location.href=window.location.href;
-					 }
- 					$(".itiscurrency").each(
- 						function () {
- 							var pul = parseFloat($(this).text());
-
-
-
- 							$(this).text(" " + parseInt((pul / parseFloat(currencyValue))) + " ");
-
- 						}
- 					);
- 				} catch {
- 					console.log("Somthing went wrong");
-
- 				}
- 			}
-
- 		}
-
- 	);
 
 
  	var siteCarousel = function () {
@@ -409,7 +367,42 @@
  		}
  	);
 
+ 	setInterval(() => {
+ 		$("#loading").fadeOut("slow");
+ 		$("html").css({
+ 			"overflow": "auto"
+ 		});
+ 	}, 0);
+ 	if(Cookies.get("currency")){
+		$(".itiscurrencyname").each(
+			function(){
+				$(this).html(Cookies.get("currency"))
+			}
+		);
+		$.getJSON("../../static/currency/currency.json",function(json){
+			json.forEach(
+				function(item){
+					if(item[0]==Cookies.get("currency")){
+						var willmultiple=parseFloat(item[1]);
+						$(".itiscurrency").each(
+							function(){
+								var value  =parseFloat( $(this).html());
+								$(this).html(" "+parseInt(value/willmultiple)+" ")
+							}
+						);
+					}
+					
+				}
+			);
+			
+		}
 
+		);
+	 }
+
+	 
+
+	 
  });
  // When the user clicks on the button, scroll to the top of the document
  function topFunction() {

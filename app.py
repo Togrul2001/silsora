@@ -1,10 +1,13 @@
-from flask import Flask,render_template,url_for,jsonify,request
+from flask import Flask,render_template,url_for,jsonify,request,redirect
 import json
 import requests
 from bs4 import BeautifulSoup
 import random
 from datetime import date
+
+import os
 app = Flask(__name__)
+
 def getObject():
      with open("cars.json","r") as file:
             data=file.read()
@@ -34,11 +37,9 @@ def getCurrency():
             data=file.read()
             file.close()
             obyekt=json.loads(data)
-            work()
             return obyekt   
     except Exception as ex:
         print(ex)
-        work()
         result=getCurrency()
         return result
 @app.errorhandler(404)
@@ -63,7 +64,8 @@ def about():
     return render_template("about.html",moneys=pullar)    
 @app.route("/changemoney/<string:currency>")
 def changemoney(currency):
-    return "{}".format(currency)
+    work()
+    return redirect(url_for("index"))
 @app.route("/car/<int:id>")
 def car(id):
     pullar=getCurrency()
@@ -203,4 +205,4 @@ def getcur():
     result=getCurrency()
     return jsonify(result)
 if __name__=="__main__":
-    app.run(debug=True)
+    app.run(port=5050,debug=True,host='127.0.0.2')

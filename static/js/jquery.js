@@ -1,31 +1,4 @@
-jQuery(document).ready(function ($) {
-    $.getJSON('https://ipapi.co/json/', function (data) {
 
-        var isCurrencyChanged = Cookies.get('isCurrencyChanged')
-
-        var currencyvalue=Cookies.get("currencyvalue");
-        if (!isCurrencyChanged) {
-            console.log("if (!isCurrencyChanged) {");
-            $.getJSON('https://ipapi.co/json/', function (data) {
-                Cookies.set("currency", data.currency)
-                if(currencyvalue==null){
-                    $.getJSON("../../static/currency/currency.json", function(json) {
-                        $.each(json, function(index, value) {
-                            if(value[0]==data.currency){
-                                Cookies.set("currencyvalue", value[1])
-                            }
-                        }); 
-                        
-                    });
-
-                }
-              
-                Cookies.set("isCurrencyChanged", true)
-            });
-        } 
-
-    });
-});
 
 function filterSelection(c) {
     if (c == "all") {
@@ -43,13 +16,8 @@ function filterSelection(c) {
         $("#cars-lits ." + c).fadeIn();
     }
 }
+function currencyChanged(){
+       Cookies.set("currency",$("#money .currency").val())
+       window.location.href="/changemoney/"+$("#money .currency").val()
 
-
-function changethemoney() {
-    var currency = $("#money .currency").val();
-    var res = currency.split("/");
-    Cookies.set("currency", res[0])
-    Cookies.set("currencyvalue", res[1])
-    Cookies.set("isCurrencyChanged", true)
-    window.location.href = "/";
 }
