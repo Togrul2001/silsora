@@ -109,12 +109,12 @@
                     </select> </a>
 
                 </li>
-                <li id="money"><a href="#" class="nav-link "> <select  class=" currency"  onchange='currencyChanged()' id="list currency" >
+                <li id="money"><form name="currency" class="nav-link "> <select  class=" currency" name="currencyselect" id="list currency" >
                     <option value="AZN">AZN</option>
                       {% for money in moneys%}
                         <option value="{{ money[0]}}"  >{{ money[0]}}</option>
                       {% endfor %}
-                    </select> </a>
+                    </select> </form>
 
                 </li>
 
