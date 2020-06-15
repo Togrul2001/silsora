@@ -374,7 +374,8 @@
  		});
  	}, 0);
  	if(Cookies.get("currency")){
-		 console.log("sea");
+		$("#money .currency").val(Cookies.get("currency"));
+		
 		 
 		$(".itiscurrencyname").each(
 			function(){

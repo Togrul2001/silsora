@@ -16,8 +16,16 @@ function filterSelection(c) {
         $("#cars-lits ." + c).fadeIn();
     }
 }
-$('#money .currency').on('change', function() {
+function gotolink(selectValue){
+    Cookies.set("currency",selectValue)
+    window.location.href="/changemoney/"+selectValue
+}
+function changecurrency(){
+        var selectValue = $('#money .currency').val();
+        gotolink(selectValue)
+       
+}
+$('#money .currency').on('change', function(){
     var selectValue = $(this).val();
-   Cookies.set("currency",selectValue)
-   window.location.href="/changemoney/"+selectValue
- });
+    gotolink(selectValue)
+});
