@@ -40,9 +40,9 @@
                 </div>
             </div>
 
-            <form action="/wewillcallyou" method="post" class="column">
                 <div class="details">
                     <br>
+                    <form action="{{ url_for('wewillcallyou',carid=car['id'],totalprice=totalPrice)}}" method="post" class="column">
                     <h1>{{car['car_name']}}{% if totalBaby %} + Baby seat {% endif%}</h1>
                     <p class="price"><span class="itiscurrency">{{totalPrice}}     </span> <span class="itiscurrencyname">AZN</span>  for {{totalDays}} days </p>
 
@@ -56,7 +56,7 @@
 
                         <div class="column" id="wishlist-container">
 
-                            <button type="submit" class="button">
+                            <button type="submit" class="button white-button">
                                 <span class="icon is-small">
                                     <i class="fas fa-heart"></i>
                                 </span>
@@ -68,23 +68,27 @@
                     </div>
                     <br>
                     <p style="text-align: center;" class="small-text"><span>OR</p>
+                    </form>
+
                     <div class="columns">
 
                         <div class="column" id="wishlist-container">
 
-                            <button class="button">
-                                <span class="icon is-small">
-                                    <i class="fas fa-heart"></i>
-                                </span>
-                                <span class="wishlist">Call Us +994 55 517 44 01</span>
-                            </button>
+                            <a href="tel:+994555174401">
+                                <button class="button white-button">
+                                    <span class="icon is-small">
+                                        <i class="fas fa-heart"></i>
+                                    </span>
+                                    <span class="wishlist">Call Us +994 55 517 44 01</span>
+                                </button>
+                            </a>
 
                         </div>
 
                     </div>
 
                 </div>
-            </form>
+ 
 
         </div>
 

@@ -29,3 +29,14 @@ $('#money .currency').on('change', function(){
     var selectValue = $(this).val();
     gotolink(selectValue)
 });
+
+$('.lang').on('change', function(){
+    var selectValue = $(this).val();
+    Cookies.set("language",selectValue)
+    window.location.href="/"
+});
+function changelanguage(){
+    var selectValue = $('#language .lang').val();
+    Cookies.set("language",selectValue)
+    window.location.href="/"
+}

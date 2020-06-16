@@ -1585,7 +1585,7 @@ h1, h2, h3, h4, h5,
 #myBtn {
   display: none;
   position: fixed;
-  bottom: 50px;
+  bottom: 11px;
   right: -30px;
   width: 120px;
   z-index: 19;

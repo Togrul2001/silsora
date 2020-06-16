@@ -10,6 +10,16 @@ $tgray:rgba(62, 62, 62, 0.9);
     font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
 }
 
+.white-button {
+    border: none;
+    outline: none;
+    background: white;
+}
+
+.word-breaker {
+    word-break: break-all;
+}
+
 /* Base */
 @import "site-base";
 /* Navbar */
@@ -163,6 +173,7 @@ body {
         width: 100%;
         height: 100%;
         float: left;
+        padding: 0px 0px 100px 0px;
     }
 
     .thumbnail-container {
@@ -233,6 +244,7 @@ body {
 
     #wishlist-container {
         padding-left: 0;
+
     }
 
     #buy-container {
@@ -700,6 +712,12 @@ body {
         width: 59%;
     }
 
+    #mobile-menu {
+        .del-web {
+            display: block !important;
+        }
+    }
+
     #a-car .asagi {
         display: block;
     }
@@ -889,8 +907,10 @@ img {
     position: relative;
     display: flex;
     justify-content: center;
+
     a {
         position: absolute;
+
         button {
             background: white;
             outline: none;
@@ -898,17 +918,151 @@ img {
             border-radius: 10px;
             padding: 10px;
             border: 1px solid red;
-            &:hover{
+
+            &:hover {
                 transition: 1s ease;
                 background: red;
-                color:white;
+                color: white;
             }
-            &:focus{
+
+            &:focus {
 
                 background: red;
-                color:white;
+                color: white;
             }
         }
     }
 
+}
+
+.del-web {
+    display: none !important;
+}
+
+#mobile-menu {
+    svg {
+        margin-bottom: 5px;
+        fill: $black;
+        width: 30px;
+        text-align: center;
+        line-height: 31px;
+        text-decoration: none;
+        transition: color 1s;
+    }
+
+    .social-networks {
+        padding: 0;
+
+        li {
+            display: inline-block;
+        }
+    }
+}
+
+#footer {
+    background-color: $black;
+    color: white;
+    font-family: 'Leckerli One', cursive;
+}
+
+#footer ul {
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 2.2;
+}
+
+#footer h5 {
+    font-size: 18px;
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#footer a {
+    color: #aaa;
+}
+
+#footer a:hover,
+#footer a:focus {
+    text-decoration: none;
+    color: white;
+}
+
+#footer .social-networks {
+    padding-top: 20px;
+    padding-bottom: 25px;
+}
+
+#footer .footer-items svg {
+    margin-bottom: 5px;
+    fill: white;
+    width: 20px;
+    text-align: center;
+    line-height: 31px;
+    text-decoration: none;
+    transition: color 1s;
+}
+
+#footer .footer-items {
+    margin: auto;
+    padding-left: 50px;
+    font-size: 15px;
+}
+
+#footer .fa-facebook:hover,
+#footer .fa-instagram:hover {
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: #182c39;
+}
+
+
+.footer-copyright {
+    background-color: $black;
+}
+
+.footer-copyright p {
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 0;
+    margin-bottom: 0;
+    font-family: 'Leckerli One', cursive;
+    padding: 35px;
+}
+
+#footer .hr-foot {
+    width: 80%;
+    margin: 10px auto;
+    border: 1px solid #fff;
+}
+
+#footer .to-top {
+    color: #fff;
+    font-size: 30px;
+    position: fixed;
+    right: 12px;
+    bottom: 12px;
+    height: 40px;
+    width: 40px;
+    text-decoration: none;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#footer .to-top:hover {
+    background-color: #222;
+    color: #fff;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
 }

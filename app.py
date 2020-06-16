@@ -1,12 +1,27 @@
-from flask import Flask,render_template,url_for,jsonify,request,redirect
+from flask import Flask,render_template,url_for,jsonify,request,redirect,make_response
 import json
 import requests
 from bs4 import BeautifulSoup
 import random
 from datetime import date
-
+from flask_babel import Babel,_
 import os
 app = Flask(__name__)
+app.config['BABEL_DEFAULT_LOCALE']='az'
+babel=Babel(app)
+@babel.localeselector
+def get_local():
+    lang=request.cookies.get('language')
+    if lang=="en":
+        return 'en'
+    elif lang=='ru':
+        return 'ru'
+    elif lang=='tr':
+        return 'tr'
+    elif lang=='az':
+        return "az"
+    else:
+        return request.accept_languages.best_match(["en","ru","tr","az"])
 
 def getObject():
      with open("cars.json","r") as file:
@@ -74,6 +89,7 @@ def car(id):
         file.close()
     obyekt=json.loads(data)
     return render_template("car.html",id=id,cars=obyekt,moneys=pullar) 
+    
 def dataNowDays(picked):
     pick=str(picked).split("-")
     pickk=[]
@@ -182,15 +198,16 @@ def calc(id):
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
-@app.route("/wewillcallyou",methods=["POST"])
-def wewillcallyou():
+@app.route("/wewillcallyou/<int:carid>/<int:totalprice>/",methods=["POST"])
+def wewillcallyou(carid,totalPrice):
     pullar=getCurrency()
     if request.method=="POST":
         name=request.form.get('name')
         mail=request.form.get('mail')
         phone=request.form.get('phone')
         obyekt=getObject()
-        return  render_template("cars.html",cars=obyekt,moneys=pullar,callyou=True)
+        # return  render_template("cars.html",cars=obyekt,moneys=pullar,callyou=True)
+        return "{}{}{}{}{}".format(name,mail,phone,carid,totalPrice)
     return render_template("404.html")
 @app.route("/")
 def index():
