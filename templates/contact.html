@@ -76,9 +76,10 @@
               <ul class="list-unstyled footer-link">
                 <li class="d-block mb-3">
                   <span class="d-block text-black">Address:</span>
-                  <span>34 Street Name, City Name Here, United States</span></li>
-                <li class="d-block mb-3"><span class="d-block text-black">Phone:</span><span>+1 242 4942 290</span></li>
-                <li class="d-block mb-3"><span class="d-block text-black">Email:</span><span>info@yourdomain.com</span>
+                  <span>{{website['address']['city']}}&nbsp;{{website['address']['street']}}&nbsp;{{website['address']['building']}}&nbsp;</span></li>
+                
+                  <li class="d-block mb-3"><span class="d-block text-black">Phone:</span><span>{{website['phones'][0]}}</span></li>
+                <li class="d-block mb-3"><span class="d-block text-black">Email:</span><span>{{website['mail']}}</span>
                 </li>
               </ul>
             </div>

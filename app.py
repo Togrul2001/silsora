@@ -49,7 +49,7 @@ def work():
     saveMoney(moneyList)
 def getJsonFile(path):
     try:
-         with open(path,"r" , encoding='utf8') as file:
+         with open(path,"r", encoding='utf8') as file:
             data=file.read()
             file.close()
             obyekt=json.loads(data)
@@ -74,27 +74,30 @@ def error405(error):
 
 @app.route("/cars")
 def cars():
+    website=getJsonFile("static/site/website.json")
     pullar=getJsonFile("static/currency/currency.json")
     with open("cars.json","r") as file:
         data=file.read()
     obyekt=json.loads(data)
-    return render_template("cars.html",cars=obyekt,moneys=pullar)
+    return render_template("cars.html",cars=obyekt,moneys=pullar,website=website)
 @app.route("/about")
 def about():
+    website=getJsonFile("static/site/website.json")
     pullar=getJsonFile("static/currency/currency.json")
-    return render_template("about.html",moneys=pullar)    
+    return render_template("about.html",moneys=pullar,website=website)
 @app.route("/changemoney/<string:currency>")
 def changemoney(currency):
     work()
     return redirect(url_for("index"))
 @app.route("/car/<int:id>")
 def car(id):
+    website=getJsonFile("static/site/website.json")
     pullar=getJsonFile("static/currency/currency.json")
     with open("cars.json","r") as file:
         data=file.read()
         file.close()
     obyekt=json.loads(data)
-    return render_template("car.html",id=id,cars=obyekt,moneys=pullar) 
+    return render_template("car.html",id=id,cars=obyekt,moneys=pullar,website=website)
     
 def dataNowDays(picked):
     pick=str(picked).split("-")
@@ -163,6 +166,7 @@ def cheking(pick,drop):
     return "",True
 
 def calPrice(pick,drop,baby,id,carss):
+    
     totalPrice=0
     numberDays=totalDays(drop,pick)
     
@@ -211,6 +215,7 @@ def takemessage():
     return render_template("404.html")
 @app.route("/calc/<int:id>",methods=["POST"])
 def calc(id):
+    website=getJsonFile("static/site/website.json")
     pullar=getJsonFile("static/currency/currency.json")
     if request.method=="POST":
         pick=request.form.get('pick')
@@ -220,19 +225,21 @@ def calc(id):
         res = cheking(pick,drop)
         if res[1] is False:
             error=res[0]
-            return render_template("car.html",id=id,cars=obyekt,moneys=pullar,error=error)
+            return render_template("car.html",id=id,cars=obyekt,moneys=pullar,error=error,website=website)
         else:
             totalPrice,totalDays,totalBaby=calPrice(pick,drop,baby,id,obyekt) 
-            return render_template("car.html",id=id,cars=obyekt,moneys=pullar,totalPrice=totalPrice,totalDays=totalDays,totalBaby=totalBaby) 
-        return render_template("car.html",id=id,cars=obyekt) 
+            return render_template("car.html",id=id,cars=obyekt,moneys=pullar,totalPrice=totalPrice,totalDays=totalDays,totalBaby=totalBaby,website=website)
+        return render_template("car.html",id=id,cars=obyekt,website=website)
         
     return render_template("404.html")
 @app.route("/contact")
 def contact():
-    return render_template("contact.html")
+    website=getJsonFile("static/site/website.json")
+    return render_template("contact.html",website=website)
 @app.route("/wewillcallyou/<int:carid>/<int:totalprice>/",methods=["POST"])
 def wewillcallyou(carid,totalPrice):
     pullar=getJsonFile("static/currency/currency.json")
+    website=getJsonFile("static/site/website.json")
     if request.method=="POST":
         name=request.form.get('name')
         mail=request.form.get('mail')
