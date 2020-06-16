@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 import random
 from datetime import date
-from flask_babel import Babel,_
+from flask_babel import Babel,_,gettext
 import os
 app = Flask(__name__)
 app.config['BABEL_DEFAULT_LOCALE']='az'
@@ -32,6 +32,7 @@ def getObject():
 def saveMoney(moneys):
     with open("static/currency/currency.json","w") as file:
         json.dump(moneys,file)
+      
 def work():
     soup = BeautifulSoup(requests.get("http://www.mezenne.az/").content, "html.parser")
     trler = soup.findAll('tr', style="white-space: nowrap;")
@@ -46,17 +47,18 @@ def work():
         deyer = deyer[:last]
         moneyList.append([pulVahidininAdi, deyer])
     saveMoney(moneyList)
-def getCurrency():
+def getJsonFile(path):
     try:
-         with open("static/currency/currency.json","r") as file:
+         with open(path,"r" , encoding='utf8') as file:
             data=file.read()
             file.close()
             obyekt=json.loads(data)
             return obyekt   
     except Exception as ex:
         print(ex)
-        result=getCurrency()
+        result=getJsonFile(path)
         return result
+
 @app.errorhandler(404)
 def error404(error):
     return render_template("404.html")
@@ -64,18 +66,22 @@ def error404(error):
 def error500(error):
     return render_template("404.html")
 @app.errorhandler(403)
-def error500(error):
+def error403(error):
     return render_template("404.html")
+@app.errorhandler(405)
+def error405(error):
+    return render_template("404.html")
+
 @app.route("/cars")
 def cars():
-    pullar=getCurrency()
+    pullar=getJsonFile("static/currency/currency.json")
     with open("cars.json","r") as file:
         data=file.read()
     obyekt=json.loads(data)
     return render_template("cars.html",cars=obyekt,moneys=pullar)
 @app.route("/about")
 def about():
-    pullar=getCurrency()
+    pullar=getJsonFile("static/currency/currency.json")
     return render_template("about.html",moneys=pullar)    
 @app.route("/changemoney/<string:currency>")
 def changemoney(currency):
@@ -83,7 +89,7 @@ def changemoney(currency):
     return redirect(url_for("index"))
 @app.route("/car/<int:id>")
 def car(id):
-    pullar=getCurrency()
+    pullar=getJsonFile("static/currency/currency.json")
     with open("cars.json","r") as file:
         data=file.read()
         file.close()
@@ -176,10 +182,36 @@ def calPrice(pick,drop,baby,id,carss):
         totalPrice+=30
         return totalPrice,numberDays,True
     return totalPrice,numberDays,False
-    
+def writethismessage(firstname,lastname,email,phone,message):
+    with open("static/messages/messages.json","r") as file:
+        data=file.read()
+        file.close()
+        data=eval(data)
+        amessage={
+            "firstname":firstname,
+            "lastname":lastname,
+            "email":email,
+            "phone":phone,
+            "message":message
+        }
+        data.append(amessage)
+        with open("static/messages/messages.json","w") as file:
+            json.dump(data,file)
+@app.route("/takemessage",methods=["POST"])
+def takemessage():
+    if request.method=="POST":
+        firstname=request.form.get('firstname')
+        lastname=request.form.get('lastname')
+        email=request.form.get('email')
+        phone=request.form.get('phone')
+        message=request.form.get('message')
+        writethismessage(firstname,lastname,email,phone,message)
+        notfication=gettext('Sizin mesajınız uğurlu şəkildə göndərildi !')
+        return "<script>alert('{}');window.location.href='/contact'</script>".format(notfication)
+    return render_template("404.html")
 @app.route("/calc/<int:id>",methods=["POST"])
 def calc(id):
-    pullar=getCurrency()
+    pullar=getJsonFile("static/currency/currency.json")
     if request.method=="POST":
         pick=request.form.get('pick')
         drop=request.form.get('drop')
@@ -200,7 +232,7 @@ def contact():
     return render_template("contact.html")
 @app.route("/wewillcallyou/<int:carid>/<int:totalprice>/",methods=["POST"])
 def wewillcallyou(carid,totalPrice):
-    pullar=getCurrency()
+    pullar=getJsonFile("static/currency/currency.json")
     if request.method=="POST":
         name=request.form.get('name')
         mail=request.form.get('mail')
@@ -211,15 +243,16 @@ def wewillcallyou(carid,totalPrice):
     return render_template("404.html")
 @app.route("/")
 def index():
-    pullar=getCurrency()
+    pullar=getJsonFile("static/currency/currency.json")
+    website=getJsonFile("static/site/website.json")
     obyekt=getObject()
     aCar=random.randint(1,len(obyekt))
     print("random a car",aCar)
-    return render_template("index.html",cars=obyekt,moneys=pullar,aCar=aCar)
+    return render_template("index.html",cars=obyekt,moneys=pullar,aCar=aCar,website=website)
 
 @app.route("/currency")
 def getcur():
-    result=getCurrency()
+    result=getJsonFile("static/currency/currency.json")
     return jsonify(result)
 if __name__=="__main__":
     app.run(port=5050,debug=True,host='127.0.0.2')

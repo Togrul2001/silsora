@@ -2199,7 +2199,12 @@ html {
 }
 
 body {
-  background: black;
+  background: #212529;
+}
+
+#services svg {
+  width: 55px;
+  fill: #212529;
 }
 
 #crash-car {
@@ -2308,7 +2313,7 @@ body {
 #calc-result {
   width: 100vw;
   position: absolute;
-  background: rgba(0, 0, 0, 0.95);
+  background: #212529;
   z-index: 20;
 }
 
@@ -2568,7 +2573,7 @@ body {
 
 #a-car {
   width: 100%;
-  background: rgba(0, 0, 0, 0.85);
+  background: #212529;
   padding: 25px;
 }
 
@@ -2621,7 +2626,7 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.99);
+  background: #212529;
   display: none;
   padding-bottom: 30px;
 }

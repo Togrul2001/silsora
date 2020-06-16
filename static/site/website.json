@@ -1,0 +1,24 @@
+{
+    "companyname":"asrentacar",
+    "companyiconlink":"/static/images/logos/icon.png",
+    "companylogolink":"/static/images/logos/logo.png",
+    "phones":[
+        "+994517711111",
+        "+994517711111",
+        "+994517711111"
+    ],
+    "mail":"asrentacar@gmail.com",
+    "address":{
+        "city":"Bakı",
+        "street":" Həsən bəy Zərdabi küçəsi",
+        "building":"78B"
+    },
+    "openhours":"monday-friday:9pm-12pm",
+    "instagram":[
+        "as_rent_a_car_011",
+        "as_rent_a_car_011"
+    ],
+    "facebook":"https://www.facebook.com/butaedu/",
+    "whatsapp":"994517711111",
+    "coderscompanyname":"AZURECODERS"
+}

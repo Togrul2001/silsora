@@ -36,8 +36,7 @@
 }
 
 .flaticon-car:before { content: "\f100"; }
-.flaticon-car-1:before { content: "\f101"; }
 .flaticon-valet:before { content: "\f102"; }
 .flaticon-valet-1:before { content: "\f103"; }
-.flaticon-traffic:before { content: "\f104"; }
+.flaticon-traffic:before { content: "\f102"; }
 .flaticon-key:before { content: "\f105"; }

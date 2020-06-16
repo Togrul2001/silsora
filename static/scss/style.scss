@@ -32,9 +32,12 @@ html {
 }
 
 body {
-    background: black;
+    background: $black;
 }
-
+#services svg{
+    width: 55px;
+    fill: $black;
+}
 #crash-car {
     width: 50%;
     right: 0;
@@ -291,7 +294,7 @@ body {
 
     width: 100vw;
     position: absolute;
-    background: rgba(0, 0, 0, 0.95);
+    background: $black;
     z-index: 20;
 
     .column {
@@ -413,7 +416,7 @@ body {
 #a-car {
 
     width: 100%;
-    background: rgba(0, 0, 0, 0.85);
+    background: $black;
     padding: 25px;
 
     #calc-button {
@@ -460,7 +463,7 @@ body {
             position: absolute;
             height: 100%;
             width: 100%;
-            background: rgba(0, 0, 0, 0.99);
+            background: $black;
             display: none;
             padding-bottom: 30px;
 
