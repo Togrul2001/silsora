@@ -40,46 +40,27 @@
             <form action="/takemessage" method="POST">
               <div class="form-group row">
                 <div class="col-md-6 mb-4 mb-lg-0">
-<<<<<<< HEAD
-                  <input type="text" class="form-control" placeholder="{{_('Ad')}}" name="firstname">
-                </div>
-                <div class="col-md-6">
-                  <input type="text" class="form-control" placeholder="{{_('Soyad')}}" name="lastname">
-=======
                   <input required type="text" class="form-control" placeholder="{{_('Ad')}}" name="firstname">
                 </div>
                 <div class="col-md-6">
                   <input  required type="text" class="form-control" placeholder="{{_('Soyad')}}" name="lastname">
->>>>>>> f55ccfc3b7b8a3557fe36d53a2c0356a8487b95b
                 </div>
               </div>
 
               <div class="form-group row">
                 <div class="col-md-12">
-<<<<<<< HEAD
-                  <input type="text" class="form-control" placeholder="{{_('E-poçt ünvanı')}}" name="email">
-=======
                   <input required type="email" class="form-control" placeholder="{{_('E-poçt ünvanı')}}" name="email">
->>>>>>> f55ccfc3b7b8a3557fe36d53a2c0356a8487b95b
                 </div>
               </div>
               <div class="form-group row">
                 <div class="col-md-12">
-<<<<<<< HEAD
-                  <input type="text" class="form-control" placeholder="{{_('Telefon nömrəsi')}}" name="phone">
-=======
                   <input required  type="text" class="form-control" placeholder="{{_('Telefon nömrəsi')}}" name="phone">
->>>>>>> f55ccfc3b7b8a3557fe36d53a2c0356a8487b95b
                 </div>
               </div>
 
               <div class="form-group row">
                 <div class="col-md-12">
-<<<<<<< HEAD
-                  <textarea  id="" name="message" class="form-control" placeholder="{{_('Mesajınızı bura yazın')}}" cols="30"
-=======
                   <textarea required id="" name="message" class="form-control" placeholder="{{_('Mesajınızı bura yazın')}}" cols="30"
->>>>>>> f55ccfc3b7b8a3557fe36d53a2c0356a8487b95b
                     rows="10"></textarea>
                 </div>
               </div>
@@ -95,13 +76,6 @@
               <h3 class="text-black mb-4">{{_('Əlaqə Məlumatı')}}</h3>
               <ul class="list-unstyled footer-link">
                 <li class="d-block mb-3">
-<<<<<<< HEAD
-                  <span class="d-block text-black">{{_('Ünvan:')}}</span>
-                  <span>{{website['address']['city']}}&nbsp;{{website['address']['street']}}&nbsp;{{website['address']['building']}}&nbsp;</span></li>
-                
-                  <li class="d-block mb-3"><span class="d-block text-black">{{_('Telefon:')}}</span><span>{{website['phones'][0]}}</span></li>
-                <li class="d-block mb-3"><span class="d-block text-black">{{_('E-poçt:')}}</span><span>{{website['mail']}}</span>
-=======
                   <a href="{{website['location']}}" target="_blank">
                     <span class="d-block text-black">{{_('Ünvan:')}}</span>
                     <span>{{website['address']['city']}}&nbsp;{{website['address']['street']}}&nbsp;{{website['address']['building']}}&nbsp;</span>
@@ -111,7 +85,6 @@
                   href="tel:{{website['phones'][0]}}"><span>{{website['phones'][0]}}</span></a></li>
                 <li class="d-block mb-3"><a href="mailto:{{website['mail']}}"><span
                       class="d-block text-black">{{_('E-poçt:')}}</span><span>{{website['mail']}}</span></a>
->>>>>>> f55ccfc3b7b8a3557fe36d53a2c0356a8487b95b
                 </li>
               </ul>
             </div>
