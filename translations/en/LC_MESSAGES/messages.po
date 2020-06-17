@@ -20,53 +20,53 @@ msgstr ""
 
 #: app.py:176
 msgid "Avtomobilin götürülmə ve buraxılma tarixi yanlış daxil edilib."
-msgstr ""
+msgstr "Pick up  and drop date of the car is entered wrongly."
 
 #: app.py:178
 msgid "Avtomobilin götürülmə ve buraxılma tarixi eyni ola bilməz."
-msgstr ""
+msgstr "Pick up and drop date of the car can't be same."
 
 #: app.py:180
 msgid "Avtomobilin götürülmə ve ya buraxılma tarixi daxil edilməyib."
-msgstr ""
+msgstr "Aracın teslim alma ve bırakma tarihi aynı olamaz."
 
 #: app.py:182
 msgid "Avtomobilin buraxılma tarixi götürülmə tarixindən tezdir."
-msgstr ""
+msgstr "Drop date of the car is earlier than  pick up date of the car."
 
 #: app.py:230
 msgid "Sizin mesajınız uğurlu şəkildə göndərildi !"
-msgstr ""
+msgstr "Your message send by successfully."
 
 #: app.py:284
 msgid ""
 "Salam hörmətli {} . Sizin istəyiniz qeydə alındı ən yaxın zamanda sizinlə"
 " əlaqə saxlayacağıq.Bizi seçdiyiniz üçün minnətdarıq."
-msgstr ""
+msgstr "Hi dear {} . Your response is recorded and we will contact you .Thanks for choosing us."
 
 #: templates/404.html:17
 msgid "Belə bir səhifə yoxdur!"
-msgstr ""
+msgstr "There is no such a page !"
 
 #: templates/404.html:22 templates/menu.html:106
 msgid "Ev"
-msgstr ""
+msgstr "Home"
 
 #: templates/404.html:23 templates/menu.html:107
 msgid "Maşınlar"
-msgstr ""
+msgstr "Cars"
 
 #: templates/404.html:24 templates/menu.html:108
 msgid "Haqqında"
-msgstr ""
+msgstr "About"
 
 #: templates/404.html:25 templates/footer.html:70 templates/menu.html:109
 msgid "Əlaqə"
-msgstr ""
+msgstr "Contact"
 
 #: templates/about.html:21
 msgid "Haqqımızda"
-msgstr ""
+msgstr "About Us"
 
 #: templates/about.html:22
 msgid ""
@@ -81,7 +81,7 @@ msgstr ""
 
 #: templates/about.html:40
 msgid "Maşın Firması"
-msgstr ""
+msgstr "Car Company"
 
 #: templates/about.html:41 templates/about.html:59
 msgid ""
@@ -99,100 +99,100 @@ msgstr ""
 
 #: templates/about.html:58
 msgid "Keçmişimiz"
-msgstr ""
+msgstr "Our History"
 
 #: templates/car.html:27 templates/car.html:139
 msgid "Bağla"
-msgstr ""
+msgstr "Close"
 
 #: templates/car.html:46
 msgid "Uşaq oturacağı"
-msgstr ""
+msgstr "Baby Seat"
 
 #: templates/car.html:47
 msgid "üçün"
-msgstr ""
+msgstr "for"
 
 #: templates/car.html:47 templates/cars.html:54 templates/index.html:144
 msgid "gün"
-msgstr ""
+msgstr "day"
 
 #: templates/car.html:50 templates/contact.html:43
 msgid "Ad"
-msgstr ""
+msgstr "Name"
 
 #: templates/car.html:51
 msgid "E-poçt"
-msgstr ""
+msgstr "E-mail"
 
 #: templates/car.html:52
 msgid "Telefon Nömrəsi"
-msgstr ""
+msgstr "Phone Number"
 
 #: templates/car.html:63
 msgid "Zəng Edin"
-msgstr ""
+msgstr "Call Us"
 
 #: templates/car.html:70
 msgid "və ya"
-msgstr ""
+msgstr "or"
 
 #: templates/car.html:82
 msgid "Bizə zəng etmək üçün klikləyin"
-msgstr ""
+msgstr "Click to call us"
 
 #: templates/car.html:143
 msgid "Götürülmə tarixi:"
-msgstr ""
+msgstr "Pick up date:"
 
 #: templates/car.html:147
 msgid "Buraxılma Tarixi:"
-msgstr ""
+msgstr "Drop date:"
 
 #: templates/car.html:151
 msgid "Uşaq oturacağı:"
-msgstr ""
+msgstr "Baby seat:"
 
 #: templates/car.html:176 templates/car.html:269
 msgid "Hesabla"
-msgstr ""
+msgstr "Calculate"
 
 #: templates/car.html:182
 msgid "Maşının tipi:"
-msgstr ""
+msgstr "Car type:"
 
 #: templates/car.html:186
 msgid "Qapılar:"
-msgstr ""
+msgstr "Doors"
 
 #: templates/car.html:190
 msgid "Mühərrik:"
-msgstr ""
+msgstr "Engine"
 
 #: templates/car.html:197
 msgid "İl:"
-msgstr ""
+msgstr "Years"
 
 #: templates/car.html:201
 msgid "Ötürücü:"
-msgstr ""
+msgstr "Transmision"
 
 #: templates/car.html:203 templates/cars.html:68 templates/index.html:41
 #: templates/index.html:92 templates/index.html:158
 msgid "Avtomatik"
-msgstr ""
+msgstr "Automatic"
 
 #: templates/car.html:205 templates/cars.html:70 templates/index.html:160
 msgid "Mexanik"
-msgstr ""
+msgstr "Mechanic"
 
 #: templates/car.html:210
 msgid "Baqaj:"
-msgstr ""
+msgstr "Laguage"
 
 #: templates/car.html:210
 msgid "Çanta"
-msgstr ""
+msgstr "Bag"
 
 #: templates/car.html:217
 msgid "Yağ:"
@@ -200,19 +200,19 @@ msgstr ""
 
 #: templates/car.html:219
 msgid "Benzin"
-msgstr ""
+msgstr "Gasoline"
 
 #: templates/car.html:221
 msgid "Dizel"
-msgstr ""
+msgstr "Disel"
 
 #: templates/car.html:226
 msgid "Yürüyüş:"
-msgstr ""
+msgstr "km"
 
 #: templates/car.html:226
 msgid "km"
-msgstr ""
+msgstr "km"
 
 #: templates/car.html:230
 msgid "Wifi"
@@ -228,27 +228,27 @@ msgstr ""
 
 #: templates/car.html:244
 msgid "1-3 gün : "
-msgstr ""
+msgstr "1-3 days : "
 
 #: templates/car.html:248
 msgid "4-7 gün : "
-msgstr ""
+msgstr "4-7 days : "
 
 #: templates/car.html:252
 msgid "8-15 gün : "
-msgstr ""
+msgstr "8-15 days : "
 
 #: templates/car.html:257
 msgid "16-30 gün : "
-msgstr ""
+msgstr "16-30 days : "
 
 #: templates/car.html:261
 msgid "30 + gün : "
-msgstr ""
+msgstr "30 + days : "
 
 #: templates/cars.html:20
 msgid "Kirayə maşınlar üçün"
-msgstr ""
+msgstr "Cars for rent"
 
 #: templates/cars.html:21 templates/contact.html:22
 msgid "Lorem ipsum dolor sit amet consectetur adipisicing elit."
@@ -256,7 +256,7 @@ msgstr ""
 
 #: templates/cars.html:34
 msgid "Hamısı"
-msgstr ""
+msgstr "All"
 
 #: templates/cars.html:35
 msgid "Sport"
@@ -264,7 +264,7 @@ msgstr ""
 
 #: templates/cars.html:36
 msgid "Biznes"
-msgstr ""
+msgstr "Business"
 
 #: templates/cars.html:37
 msgid "Full-size"
@@ -276,43 +276,43 @@ msgstr ""
 
 #: templates/cars.html:39
 msgid "Ekonomik"
-msgstr ""
+msgstr "Economy"
 
 #: templates/cars.html:58 templates/index.html:27 templates/index.html:78
 #: templates/index.html:148
 msgid "Qapılar"
-msgstr ""
+msgstr "Doors"
 
 #: templates/cars.html:62 templates/index.html:31 templates/index.html:82
 #: templates/index.html:152
 msgid "Oturacaqlar"
-msgstr ""
+msgstr "Seats"
 
 #: templates/cars.html:66 templates/index.html:39 templates/index.html:90
 #: templates/index.html:156
 msgid "Ötürücü"
-msgstr ""
+msgstr "Transmision"
 
 #: templates/cars.html:74 templates/index.html:47 templates/index.html:98
 #: templates/index.html:164
 msgid "İl"
-msgstr ""
+msgstr "Years"
 
 #: templates/cars.html:79
 msgid "Detallar"
-msgstr ""
+msgstr "Details"
 
 #: templates/cars.html:105
 msgid "Sorğu göndərildi. Biz sizə zəng edəcəyik"
-msgstr ""
+msgstr "Message has been sent.We will contact you."
 
 #: templates/contact.html:21
 msgid "Bizimlə Əlaqə"
-msgstr ""
+msgstr "Contact Us"
 
 #: templates/contact.html:33
 msgid "Bizimlə Əlaqə Qurun və ya Formu Doldurun"
-msgstr ""
+msgstr "Contact us or use form"
 
 #: templates/contact.html:34
 msgid ""
@@ -323,39 +323,39 @@ msgstr ""
 
 #: templates/contact.html:46
 msgid "Soyad"
-msgstr ""
+msgstr "Last Name"
 
 #: templates/contact.html:52
 msgid "E-poçt ünvanı"
-msgstr ""
+msgstr "E-mail address"
 
 #: templates/contact.html:57
 msgid "Telefon nömrəsi"
-msgstr ""
+msgstr "Phone Number"
 
 #: templates/contact.html:63
 msgid "Mesajınızı bura yazın"
-msgstr ""
+msgstr "Write your message here"
 
 #: templates/contact.html:69
 msgid "Mesajı Göndər"
-msgstr ""
+msgstr "Send Message"
 
 #: templates/contact.html:76
 msgid "Əlaqə Məlumatı"
-msgstr ""
+msgstr "Contact Info"
 
 #: templates/contact.html:80
 msgid "Ünvan:"
-msgstr ""
+msgstr "Address"
 
 #: templates/contact.html:84
 msgid "Telefon:"
-msgstr ""
+msgstr "Number:"
 
 #: templates/contact.html:87
 msgid "E-poçt:"
-msgstr ""
+msgstr "E-mail:"
 
 #: templates/footer.html:16
 msgid ""
@@ -366,15 +366,15 @@ msgstr ""
 
 #: templates/footer.html:76 templates/menu.html:24 templates/menu.html:183
 msgid "Bakı, Həsən bəy Zərdabi küçəsi, 78B"
-msgstr ""
+msgstr "78B Hasan bey Zardabi Street, Baku, Azerbaijan"
 
 #: templates/footer.html:118
 msgid "Açıq Saatlar"
-msgstr ""
+msgstr "Open hours"
 
 #: templates/footer.html:122 templates/menu.html:52
 msgid "Bazar ertəsi - Cümə : 09:00 - 00:00"
-msgstr ""
+msgstr "Monday-Friday : 09:00 - 00:00"
 
 #: templates/footer.html:133
 msgid "Copyright"
@@ -382,7 +382,7 @@ msgstr ""
 
 #: templates/footer.html:135
 msgid "Bütün Hüquqlar Qorunur"
-msgstr ""
+msgstr "All rights reserved"
 
 #: templates/footer.html:135
 msgid "Team"
@@ -394,31 +394,31 @@ msgstr ""
 
 #: templates/index.html:35 templates/index.html:86
 msgid "Baqaj"
-msgstr ""
+msgstr "Laguage"
 
 #: templates/index.html:36 templates/index.html:87
 msgid "Çantalar"
-msgstr ""
+msgstr "Bags"
 
 #: templates/index.html:43 templates/index.html:94
 msgid "Mexanika"
-msgstr ""
+msgstr "Mechanic"
 
 #: templates/index.html:52 templates/index.html:103
 msgid "/gün"
-msgstr ""
+msgstr "/day"
 
 #: templates/index.html:53 templates/index.html:104 templates/index.html:169
 msgid "İcarəyə götür"
-msgstr ""
+msgstr "Rent"
 
 #: templates/index.html:119
 msgid "Bütün Maşınları Göstər"
-msgstr ""
+msgstr "Show all cars"
 
 #: templates/index.html:123
 msgid "Bizim Təklifimiz"
-msgstr ""
+msgstr "Our Offers"
 
 #: templates/index.html:124
 msgid ""
@@ -428,31 +428,31 @@ msgstr ""
 
 #: templates/index.html:126
 msgid "Geri"
-msgstr ""
+msgstr "Back"
 
 #: templates/index.html:128
 msgid "İrəli"
-msgstr ""
+msgstr "Forward"
 
 #: templates/index.html:189
 msgid "Bizim Xidmətlərimiz"
-msgstr ""
+msgstr "Our Services"
 
 #: templates/index.html:311
 msgid "Turlar"
-msgstr ""
+msgstr "Tours"
 
 #: templates/index.html:312
 msgid "Şəhər və rayon turlarının təşkili"
-msgstr ""
+msgstr "Organization of the city and town tours"
 
 #: templates/index.html:322
 msgid "Avtomobil icarəsi"
-msgstr ""
+msgstr "Rent a car"
 
 #: templates/index.html:323
 msgid "Hər növ avtomobillərin günlük,həftəlik,aylıq icarəsi"
-msgstr ""
+msgstr "Renting all types of cars for days,weeks,months."
 
 #: templates/index.html:333
 msgid "Bura bilmirəm nə yazam"
@@ -464,25 +464,25 @@ msgstr ""
 
 #: templates/menu.html:111
 msgid "Dil"
-msgstr ""
+msgstr "Language"
 
 #: templates/menu.html:112
 msgid "Azərbaycanca"
-msgstr ""
+msgstr "Azerbaijani"
 
 #: templates/menu.html:113
 msgid "Türkcə"
-msgstr ""
+msgstr "Turkish"
 
 #: templates/menu.html:114
 msgid "Rusca"
-msgstr ""
+msgstr "Russian"
 
 #: templates/menu.html:115
 msgid "İngiliscə"
-msgstr ""
+msgstr "English"
 
 #: templates/menu.html:119
 msgid "Pul vahidi"
-msgstr ""
+msgstr "Currency"
 
