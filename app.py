@@ -173,13 +173,13 @@ def cheking(pick,drop):
     total=str(pick)+str(drop)
     print(total)
     if dataNowDays(pick):
-        return str(gettext('Informasiya yanlis daxil edilib')), False
+        return str(gettext('Avtomobilin götürülmə ve buraxılma tarixi yanlış daxil edilib.')), False
     elif str(pick)==str(drop):
-        return str(gettext('Goturulme tarixi ve buraxilma tarixi eyni ola bilmez')), False
+        return str(gettext('Avtomobilin götürülmə ve buraxılma tarixi eyni ola bilməz.')), False
     elif len(total)<19:
-        return str(gettext('Goturulme tarixi ve ya buraxilma tarixi daxil edilmeyib')), False
+        return str(gettext('Avtomobilin götürülmə ve ya buraxılma tarixi daxil edilməyib.')), False
     elif totalDays(drop,pick)<0:
-        return str(gettext('Buraxilma tarixi Goturulme tarixinden tezdir')), False
+        return str(gettext('Avtomobilin buraxılma tarixi götürülmə tarixindən tezdir.')), False
     return "",True
 
 def calPrice(pick,drop,baby,id,carss):
@@ -227,7 +227,7 @@ def takemessage():
         phone=request.form.get('phone')
         message=request.form.get('message')
         writethismessage(firstname,lastname,email,phone,message)
-        notfication=gettext('Sizin mesajınız uğurlu şəkildə göndərildi !')
+        notfication=str(gettext('Sizin mesajınız uğurlu şəkildə göndərildi !'))
         return "<script>alert('{}');window.location.href='/contact'</script>".format(notfication)
     return render_template("404.html")
 @app.route("/calc/<int:id>",methods=["POST"])
@@ -281,7 +281,7 @@ def wewillcallyou(carid,totalPrice,pickdate,dropdate,babyseat):
         mail=request.form.get('mail')
         phone=request.form.get('phone')
         writethisresponse(name,mail,phone,carid,totalPrice,pickdate,dropdate,babyseat)
-        notfication=gettext('Salam hörmətli {} . Sizin istəyiniz qeydə alındı ən yaxın zamanda sizinlə əlaqə saxlayacağıq.Bizi seçdiyiniz üçün minnətdarıq. :)'.format(name))
+        notfication=str(gettext('Salam hörmətli {} . Sizin istəyiniz qeydə alındı ən yaxın zamanda sizinlə əlaqə saxlayacağıq.Bizi seçdiyiniz üçün minnətdarıq.'.format(name)))
         return "<script>alert('{}');window.location.href='/cars'</script>".format(notfication)
     return render_template("404.html")
 @app.route("/")

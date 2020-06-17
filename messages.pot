@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-06-17 18:14+0400\n"
+"POT-Creation-Date: 2020-06-17 18:56+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,19 +18,19 @@ msgstr ""
 "Generated-By: Babel 2.8.0\n"
 
 #: app.py:176
-msgid "Informasiya yanlis daxil edilib"
+msgid "Avtomobilin götürülmə ve buraxılma tarixi yanlış daxil edilib."
 msgstr ""
 
 #: app.py:178
-msgid "Goturulme tarixi ve buraxilma tarixi eyni ola bilmez"
+msgid "Avtomobilin götürülmə ve buraxılma tarixi eyni ola bilməz."
 msgstr ""
 
 #: app.py:180
-msgid "Goturulme tarixi ve ya buraxilma tarixi daxil edilmeyib"
+msgid "Avtomobilin götürülmə ve ya buraxılma tarixi daxil edilməyib."
 msgstr ""
 
 #: app.py:182
-msgid "Buraxilma tarixi Goturulme tarixinden tezdir"
+msgid "Avtomobilin buraxılma tarixi götürülmə tarixindən tezdir."
 msgstr ""
 
 #: app.py:230
@@ -40,7 +40,7 @@ msgstr ""
 #: app.py:284
 msgid ""
 "Salam hörmətli {} . Sizin istəyiniz qeydə alındı ən yaxın zamanda sizinlə"
-" əlaqə saxlayacağıq.Bizi seçdiyiniz üçün minnətdarıq. :)"
+" əlaqə saxlayacağıq.Bizi seçdiyiniz üçün minnətdarıq."
 msgstr ""
 
 #: templates/404.html:17
