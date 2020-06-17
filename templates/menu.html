@@ -103,12 +103,12 @@
 
             <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
               <ul class="site-menu main-menu js-clone-nav ml-auto ">
-                <li><a href="{{ url_for('index') }}" class="nav-link">Home</a></li>
-                <li><a href="{{ url_for('cars') }}" class="nav-link">Cars</a></li>
-                <li><a href="{{ url_for('about') }}" class="nav-link">About</a></li>
-                <li><a href="{{ url_for('contact') }}" class="nav-link">Contact</a></li>
+                <li><a href="{{ url_for('index') }}" class="nav-link">{{_('Ev')}}</a></li>
+                <li><a href="{{ url_for('cars') }}" class="nav-link">{{_('Maşınlar')}}</a></li>
+                <li><a href="{{ url_for('about') }}" class="nav-link">{{_('Haqqında')}}</a></li>
+                <li><a href="{{ url_for('contact') }}" class="nav-link">{{_('Əlaqə')}}</a></li>
                 <li><a href="#" class="nav-link" id="language"> <select onchange="changelanguage()" class="lang" id="list">
-                  <option value="null">Language</option>
+                  <option value="null">{{_('Dil')}}</option>
                       <option value="az">{{ _('Azərbaycanca') }}</option>
                       <option value="tr">{{ _('Türkcə') }}</option>
                       <option  value="ru">{{ _('Rusca') }}</option>
@@ -116,7 +116,7 @@
                     </select> </a>
 
                 </li>
-                <li ><a id="money" name="currency" class="nav-link "> <span>Currency:</span><select onchange="changecurrency()"  class=" currency" name="currencyselect" id="list" >
+                <li ><a id="money" name="currency" class="nav-link "> <span>{{_('Pul vahidi')}}</span><select onchange="changecurrency()"  class=" currency" name="currencyselect" id="list" >
                     <option class="AZN" value="AZN">AZN</option>
                       {% for money in moneys%}
                         <option class="{{ money[0]}}" value="{{ money[0]}}"  >{{ money[0]}}</option>

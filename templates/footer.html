@@ -13,8 +13,8 @@
         <hr class="hr-foot">
         <div class="footer-items">
           <p class="footer">
-            {{website['companyname']}} is small indie game studio based in Croatia. Founded in 2020, on a mission to make
-            beautiful, fun and popular mobile games.
+            {{website['companyname']}} {{_('is small indie game studio based in Croatia. Founded in 2020, on a mission to make
+            beautiful, fun and popular mobile games.')}}
           </p>
           <ul class="social-networks">
             <a href="{{website['facebook']}}" class="facebook" target="_blank"><svg
@@ -67,7 +67,7 @@
         </div>
       </div>
       <div class="col-md-4 col-sm-4">
-        <h5>Our contact</h5>
+        <h5> {{_('Əlaqə')}}</h5>
         <hr class="hr-foot">
         <div class="footer-items">
           <address>
@@ -116,7 +116,7 @@
         </div>
       </div>
       <div class="col-md-4 col-sm-4">
-        <h5>Open hours</h5>
+        <h5> {{_('Açıq Saatlar')}}</h5>
         <hr class="hr-foot">
         <div class="footer-items">
           <ul>
@@ -127,16 +127,13 @@
     </div>
   </div>
 
-  <a class="to-top" href="#myPage" title="toTop">
-    <i class="fa fa-chevron-up"></i>
-  </a>
 </footer>
 <div class="footer-copyright">
   <p>
     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-    Copyright &copy;<script>
+    {{_('Copyright')}} &copy;<script>
       document.write(new Date().getFullYear());
-    </script> All rights reserved | This template is made with {{website['coderscompany']}} Team</a>
+    </script>  {{_('Bütün Hüquqlar Qorunur')}} {{website['coderscompany']}} {{_('Team')}}</a>
     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
   </p>
 </div>
