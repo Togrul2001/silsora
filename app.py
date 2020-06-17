@@ -187,7 +187,7 @@ def calPrice(pick,drop,baby,id,carss):
         return totalPrice,numberDays,True
     return totalPrice,numberDays,False
 def writethismessage(firstname,lastname,email,phone,message):
-    with open("static/messages/messages.json","r") as file:
+    with open("static/messages/messages.json","r" , encoding='utf8') as file:
         data=file.read()
         file.close()
         data=eval(data)
@@ -199,7 +199,7 @@ def writethismessage(firstname,lastname,email,phone,message):
             "message":message
         }
         data.append(amessage)
-        with open("static/messages/messages.json","w") as file:
+        with open("static/messages/messages.json","w" , encoding='utf8') as file:
             json.dump(data,file)
 @app.route("/takemessage",methods=["POST"])
 def takemessage():
@@ -236,36 +236,34 @@ def calc(id):
 def contact():
     website=getJsonFile("static/site/website.json")
     return render_template("contact.html",website=website)
-def writethisresponse(name,mail,phone,carid,totalPrice,pickdate,dropdate,babyseat):
-    with open("static/responses/carresponses.json","r") as file:
+def writethisresponse(fullname,mail,phone,carid,totalPrice,pickdate,dropdate,babyseat):
+    with open("static/responses/carresponses.json","r",encoding='utf8') as file:
         data=file.read()
         file.close()
         data=eval(data)
-        babyseat=bool(babyseat)
+        print(data)
         amessage={
-            "name":name,
+            "fullname":fullname,
             "mail":mail,
             "phone":phone,
             "carid":carid,
             "totalPrice":totalPrice,
             "pickdate":pickdate,
             "dropdate":dropdate,
-            "babyseat":babyseat,
+            "babyseat":babyseat
         }
         data.append(amessage)
-        
-        with open("static/responses/carresponses.json","w") as file:
+
+        with open("static/responses/carresponses.json","w",encoding='utf8') as file:
             json.dump(data,file)
             print(data)
 @app.route("/wewillcallyou/<int:carid>/<int:totalPrice>/<string:pickdate>/<string:dropdate>/<string:babyseat>",methods=["POST"])
 def wewillcallyou(carid,totalPrice,pickdate,dropdate,babyseat):
-    pullar=getJsonFile("static/currency/currency.json")
-    website=getJsonFile("static/site/website.json")
     if request.method=="POST":
         name=request.form.get('name')
         mail=request.form.get('mail')
         phone=request.form.get('phone')
-        obyekt=getObject()
+        writethisresponse(name,mail,phone,carid,totalPrice,pickdate,dropdate,babyseat)
         notfication=gettext('Salam hörmətli {} . Sizin istəyiniz qeydə alındı ən yaxın zamanda sizinlə əlaqə saxlayacağıq.Bizi seçdiyiniz üçün minnətdarıq. :)'.format(name))
         return "<script>alert('{}');window.location.href='/cars'</script>".format(notfication)
     return render_template("404.html")

@@ -139,8 +139,15 @@ body {
         font-weight: bold;
         padding: 5px;
         text-transform: uppercase;
+        &:hover {
+            transition: 1s ease;
+            background: red;
+            border: 1px solid white;
+            color: white;
 
+        }
         &:focus {
+            transition: 1s ease;
             background: red;
             border: 1px solid white;
             color: white;

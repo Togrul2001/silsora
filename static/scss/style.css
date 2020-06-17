@@ -2304,7 +2304,17 @@ body {
   text-transform: uppercase;
 }
 
+#types-of-cars button:hover {
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+  background: red;
+  border: 1px solid white;
+  color: white;
+}
+
 #types-of-cars button:focus {
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
   background: red;
   border: 1px solid white;
   color: white;
