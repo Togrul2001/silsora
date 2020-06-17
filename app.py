@@ -6,6 +6,7 @@ import random
 from datetime import date
 from flask_babel import Babel,_,gettext
 import os
+from urllib.request import urlopen
 app = Flask(__name__)
 app.config['BABEL_DEFAULT_LOCALE']='az'
 babel=Babel(app)
@@ -27,13 +28,14 @@ def get_local():
     elif lang=='az':
         return "az"
     else:
-        if getCountry()=="en":
+        lang=getCountry()
+        if lang =="en":
             return 'en'
-        elif getCountry()=='ru':
+        elif lang=='ru':
             return 'ru'
-        elif getCountry()=='tr':
+        elif lang=='tr':
             return 'tr'
-        elif getCountry()=='az':
+        elif lang=='az':
             return "az"
         else:
             return 'en'
@@ -181,12 +183,9 @@ def cheking(pick,drop):
     elif totalDays(drop,pick)<0:
         return str(gettext('Avtomobilin buraxılma tarixi götürülmə tarixindən tezdir.')), False
     return "",True
-
 def calPrice(pick,drop,baby,id,carss):
-    
     totalPrice=0
     numberDays=totalDays(drop,pick)
-    
     for car in carss:
         if car['id']==id:
             if numberDays<4:
