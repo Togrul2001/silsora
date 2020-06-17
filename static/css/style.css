@@ -635,7 +635,7 @@ h1, h2, h3, h4, h5,
     list-style: none;
     position: relative; }
     .site-mobile-menu .site-nav-wrap a {
-      padding: 10px 20px;
+      padding: 10px;
       display: block;
       position: relative;
       color: #212529; }
