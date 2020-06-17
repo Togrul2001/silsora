@@ -117,6 +117,7 @@
         "gps": true,
         "bluetooth": false,
         "oil": 1,
+        "km": 450,
         "photo_links": "images/cars/carid4.jpeg",
         "links": [
             "images/cars/carid1.jpeg",
