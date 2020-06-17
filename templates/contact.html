@@ -40,27 +40,27 @@
             <form action="/takemessage" method="POST">
               <div class="form-group row">
                 <div class="col-md-6 mb-4 mb-lg-0">
-                  <input type="text" class="form-control" placeholder="First name" name="firstname">
+                  <input required type="text" class="form-control" placeholder="First name" name="firstname">
                 </div>
                 <div class="col-md-6">
-                  <input type="text" class="form-control" placeholder="Last name" name="lastname">
+                  <input  required type="text" class="form-control" placeholder="Last name" name="lastname">
                 </div>
               </div>
 
               <div class="form-group row">
                 <div class="col-md-12">
-                  <input type="text" class="form-control" placeholder="Email address" name="email">
+                  <input required type="email" class="form-control" placeholder="Email address" name="email">
                 </div>
               </div>
               <div class="form-group row">
                 <div class="col-md-12">
-                  <input type="text" class="form-control" placeholder="Phone number" name="phone">
+                  <input required  type="text" class="form-control" placeholder="Phone number" name="phone">
                 </div>
               </div>
 
               <div class="form-group row">
                 <div class="col-md-12">
-                  <textarea id="" name="message" class="form-control" placeholder="Write your message." cols="30"
+                  <textarea required id="" name="message" class="form-control" placeholder="Write your message." cols="30"
                     rows="10"></textarea>
                 </div>
               </div>

@@ -228,7 +228,7 @@ def calc(id):
             return render_template("car.html",id=id,cars=obyekt,moneys=pullar,error=error,website=website)
         else:
             totalPrice,totalDays,totalBaby=calPrice(pick,drop,baby,id,obyekt) 
-            return render_template("car.html",id=id,cars=obyekt,moneys=pullar,totalPrice=totalPrice,totalDays=totalDays,totalBaby=totalBaby,website=website)
+            return render_template("car.html",id=id,cars=obyekt,moneys=pullar,totalPrice=totalPrice,totalDays=totalDays,totalBaby=totalBaby,website=website,pick=pick,drop=drop)
         return render_template("car.html",id=id,cars=obyekt,website=website)
         
     return render_template("404.html")
@@ -236,8 +236,29 @@ def calc(id):
 def contact():
     website=getJsonFile("static/site/website.json")
     return render_template("contact.html",website=website)
-@app.route("/wewillcallyou/<int:carid>/<int:totalprice>/",methods=["POST"])
-def wewillcallyou(carid,totalPrice):
+def writethisresponse(name,mail,phone,carid,totalPrice,pickdate,dropdate,babyseat):
+    with open("static/responses/carresponses.json","r") as file:
+        data=file.read()
+        file.close()
+        data=eval(data)
+        babyseat=bool(babyseat)
+        amessage={
+            "name":name,
+            "mail":mail,
+            "phone":phone,
+            "carid":carid,
+            "totalPrice":totalPrice,
+            "pickdate":pickdate,
+            "dropdate":dropdate,
+            "babyseat":babyseat,
+        }
+        data.append(amessage)
+        
+        with open("static/responses/carresponses.json","w") as file:
+            json.dump(data,file)
+            print(data)
+@app.route("/wewillcallyou/<int:carid>/<int:totalPrice>/<string:pickdate>/<string:dropdate>/<string:babyseat>",methods=["POST"])
+def wewillcallyou(carid,totalPrice,pickdate,dropdate,babyseat):
     pullar=getJsonFile("static/currency/currency.json")
     website=getJsonFile("static/site/website.json")
     if request.method=="POST":
@@ -245,8 +266,8 @@ def wewillcallyou(carid,totalPrice):
         mail=request.form.get('mail')
         phone=request.form.get('phone')
         obyekt=getObject()
-        # return  render_template("cars.html",cars=obyekt,moneys=pullar,callyou=True)
-        return "{}{}{}{}{}".format(name,mail,phone,carid,totalPrice)
+        notfication=gettext('Salam hörmətli {} . Sizin istəyiniz qeydə alındı ən yaxın zamanda sizinlə əlaqə saxlayacağıq.Bizi seçdiyiniz üçün minnətdarıq. :)'.format(name))
+        return "<script>alert('{}');window.location.href='/cars'</script>".format(notfication)
     return render_template("404.html")
 @app.route("/")
 def index():
