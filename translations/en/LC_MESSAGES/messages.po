@@ -366,7 +366,7 @@ msgstr ""
 
 #: templates/footer.html:76 templates/menu.html:24 templates/menu.html:183
 msgid "Bakı, Həsən bəy Zərdabi küçəsi, 78B"
-msgstr "78B Hasan bey Zardabi Street, Baku, Azerbaijan"
+msgstr "78B Hasan bey Zardabi Street, Baku"
 
 #: templates/footer.html:118
 msgid "Açıq Saatlar"
