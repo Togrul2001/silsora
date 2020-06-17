@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-06-17 21:18+0400\n"
+"POT-Creation-Date: 2020-06-17 23:05+0400\n"
 "PO-Revision-Date: 2020-06-17 21:19+0400\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -18,31 +18,33 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: app.py:176
+#: app.py:178
 msgid "Avtomobilin götürülmə ve buraxılma tarixi yanlış daxil edilib."
 msgstr "Pick up  and drop date of the car is entered wrongly."
 
-#: app.py:178
+#: app.py:180
 msgid "Avtomobilin götürülmə ve buraxılma tarixi eyni ola bilməz."
 msgstr "Pick up and drop date of the car can't be same."
 
-#: app.py:180
+#: app.py:182
 msgid "Avtomobilin götürülmə ve ya buraxılma tarixi daxil edilməyib."
 msgstr "Aracın teslim alma ve bırakma tarihi aynı olamaz."
 
-#: app.py:182
+#: app.py:184
 msgid "Avtomobilin buraxılma tarixi götürülmə tarixindən tezdir."
 msgstr "Drop date of the car is earlier than  pick up date of the car."
 
-#: app.py:230
+#: app.py:229
 msgid "Sizin mesajınız uğurlu şəkildə göndərildi !"
 msgstr "Your message send by successfully."
 
-#: app.py:284
+#: app.py:283
 msgid ""
 "Salam hörmətli {} . Sizin istəyiniz qeydə alındı ən yaxın zamanda sizinlə"
 " əlaqə saxlayacağıq.Bizi seçdiyiniz üçün minnətdarıq."
-msgstr "Hi dear {} . Your response is recorded and we will contact you .Thanks for choosing us."
+msgstr ""
+"Hi dear {} . Your response is recorded and we will contact you .Thanks "
+"for choosing us."
 
 #: templates/404.html:17
 msgid "Belə bir səhifə yoxdur!"
@@ -190,13 +192,13 @@ msgstr "Mechanic"
 msgid "Baqaj:"
 msgstr "Laguage"
 
-#: templates/car.html:210
+#: templates/car.html:210 templates/index.html:36 templates/index.html:87
 msgid "Çanta"
 msgstr "Bag"
 
 #: templates/car.html:217
 msgid "Yağ:"
-msgstr ""
+msgstr "Fuel:"
 
 #: templates/car.html:219
 msgid "Benzin"
@@ -349,6 +351,11 @@ msgstr "Contact Info"
 msgid "Ünvan:"
 msgstr "Address"
 
+#: templates/contact.html:81 templates/footer.html:76 templates/menu.html:24
+#: templates/menu.html:183
+msgid "Bakı, Həsən bəy Zərdabi küçəsi, 78B"
+msgstr "78B Hasan bey Zardabi Street, Baku"
+
 #: templates/contact.html:84
 msgid "Telefon:"
 msgstr "Number:"
@@ -363,10 +370,6 @@ msgid ""
 "mission to make\n"
 "            beautiful, fun and popular mobile games."
 msgstr ""
-
-#: templates/footer.html:76 templates/menu.html:24 templates/menu.html:183
-msgid "Bakı, Həsən bəy Zərdabi küçəsi, 78B"
-msgstr "78B Hasan bey Zardabi Street, Baku"
 
 #: templates/footer.html:118
 msgid "Açıq Saatlar"
@@ -395,10 +398,6 @@ msgstr ""
 #: templates/index.html:35 templates/index.html:86
 msgid "Baqaj"
 msgstr "Laguage"
-
-#: templates/index.html:36 templates/index.html:87
-msgid "Çantalar"
-msgstr "Bags"
 
 #: templates/index.html:43 templates/index.html:94
 msgid "Mexanika"
@@ -484,5 +483,5 @@ msgstr "English"
 
 #: templates/menu.html:119
 msgid "Pul vahidi"
-msgstr "Currency"
+msgstr "Currency-"
 

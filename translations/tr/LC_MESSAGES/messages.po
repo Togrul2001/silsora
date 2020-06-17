@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-06-17 21:18+0400\n"
+"POT-Creation-Date: 2020-06-17 23:05+0400\n"
 "PO-Revision-Date: 2020-06-17 21:11+0400\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: tr\n"
@@ -18,31 +18,31 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: app.py:176
+#: app.py:178
 msgid "Avtomobilin götürülmə ve buraxılma tarixi yanlış daxil edilib."
 msgstr "Aracın teslim alma ve bırakma tarihi yanlış girildi."
 
-#: app.py:178
+#: app.py:180
 msgid "Avtomobilin götürülmə ve buraxılma tarixi eyni ola bilməz."
 msgstr "Aracın teslim alma ve bırakma tarihi aynı olamaz."
 
-#: app.py:180
+#: app.py:182
 msgid "Avtomobilin götürülmə ve ya buraxılma tarixi daxil edilməyib."
 msgstr "Aracın teslim alma ve bırakma tarihi içerilmediş"
 
-#: app.py:182
-msgid "Aracın bırakma tarihi teslim alma tarihinden önce."
-msgstr ""
+#: app.py:184
+msgid "Avtomobilin buraxılma tarixi götürülmə tarixindən tezdir."
+msgstr "Aracın teslim alma tarihi bırakma tarihinden önce"
 
-#: app.py:230
+#: app.py:229
 msgid "Sizin mesajınız uğurlu şəkildə göndərildi !"
 msgstr "Mesajınız başarıyla gönderilmiştir!"
 
-#: app.py:284
+#: app.py:283
 msgid ""
 "Salam hörmətli {} . Sizin istəyiniz qeydə alındı ən yaxın zamanda sizinlə"
 " əlaqə saxlayacağıq.Bizi seçdiyiniz üçün minnətdarıq."
-msgstr "Merhaba sayın {}. Sizin talebiniz kaydedildi. En kısa sürede sizinle iletişime geçeceğiz Bizi seçtiğiniz için teşekkür ederiz."
+msgstr "Merhaba sayın {}. Sizin talebiniz kaydedildi. En kısa sürede sizinle iletişime geçeceğiz. Bizi tercih ettiğiniz için teşekkürler."
 
 #: templates/404.html:17
 msgid "Belə bir səhifə yoxdur!"
@@ -103,11 +103,11 @@ msgstr "Geçmişimiz"
 
 #: templates/car.html:27 templates/car.html:139
 msgid "Bağla"
-msgstr ""
+msgstr "Kapat"
 
 #: templates/car.html:46
 msgid "Uşaq oturacağı"
-msgstr "Çocuk koltuğu"
+msgstr "Çocuk koltuğu:"
 
 #: templates/car.html:47
 msgid "üçün"
@@ -159,23 +159,23 @@ msgstr "Hesapla"
 
 #: templates/car.html:182
 msgid "Maşının tipi:"
-msgstr "Arabanın türü"
+msgstr "Arabanın türü : "
 
 #: templates/car.html:186
 msgid "Qapılar:"
-msgstr "Kapılar"
+msgstr "Kapılar : "
 
 #: templates/car.html:190
 msgid "Mühərrik:"
-msgstr "Motor"
+msgstr "Motor : "
 
 #: templates/car.html:197
 msgid "İl:"
-msgstr "Yıl"
+msgstr "Yıl : "
 
 #: templates/car.html:201
 msgid "Ötürücü:"
-msgstr "Transmisyon"
+msgstr "Transmisyon : "
 
 #: templates/car.html:203 templates/cars.html:68 templates/index.html:41
 #: templates/index.html:92 templates/index.html:158
@@ -188,15 +188,15 @@ msgstr "Mekanik"
 
 #: templates/car.html:210
 msgid "Baqaj:"
-msgstr "Bagaj"
+msgstr "Bagaj : "
 
-#: templates/car.html:210
+#: templates/car.html:210 templates/index.html:36 templates/index.html:87
 msgid "Çanta"
 msgstr "Çanta"
 
 #: templates/car.html:217
 msgid "Yağ:"
-msgstr "Yağ"
+msgstr "Yakıt : "
 
 #: templates/car.html:219
 msgid "Benzin"
@@ -208,7 +208,7 @@ msgstr "Dizel"
 
 #: templates/car.html:226
 msgid "Yürüyüş:"
-msgstr "Kilometraj"
+msgstr "Kilometraj : "
 
 #: templates/car.html:226
 msgid "km"
@@ -228,23 +228,23 @@ msgstr "Bluetooth"
 
 #: templates/car.html:244
 msgid "1-3 gün : "
-msgstr "1-3 gün"
+msgstr "1-3 gün : "
 
 #: templates/car.html:248
 msgid "4-7 gün : "
-msgstr "4-7 gün"
+msgstr "4-7 gün : "
 
 #: templates/car.html:252
 msgid "8-15 gün : "
-msgstr "8-15 gün"
+msgstr "8-15 gün : "
 
 #: templates/car.html:257
 msgid "16-30 gün : "
-msgstr "16-30 gün"
+msgstr "16-30 gün : "
 
 #: templates/car.html:261
 msgid "30 + gün : "
-msgstr "30 + gün"
+msgstr "30 + gün : "
 
 #: templates/cars.html:20
 msgid "Kirayə maşınlar üçün"
@@ -322,8 +322,8 @@ msgid ""
 msgstr ""
 
 #: templates/contact.html:46
-msgid "Soyadı"
-msgstr ""
+msgid "Soyad"
+msgstr "Soyad"
 
 #: templates/contact.html:52
 msgid "E-poçt ünvanı"
@@ -349,6 +349,11 @@ msgstr "İletişim bilgileri"
 msgid "Ünvan:"
 msgstr "Adress:"
 
+#: templates/contact.html:81 templates/footer.html:76 templates/menu.html:24
+#: templates/menu.html:183
+msgid "Bakı, Həsən bəy Zərdabi küçəsi, 78B"
+msgstr "Bakü, Hasan bey Zardabi, 78B"
+
 #: templates/contact.html:84
 msgid "Telefon:"
 msgstr "Telefon:"
@@ -362,11 +367,9 @@ msgid ""
 "is small indie game studio based in Croatia. Founded in 2020, on a "
 "mission to make\n"
 "            beautiful, fun and popular mobile games."
-msgstr "Hırvatistan merkezli küçük indie oyun stüdyosu. Güzel, eğlenceli ve popüler mobil oyunlar yapmak için 2020 yılında kuruldu."
-
-#: templates/footer.html:76 templates/menu.html:24 templates/menu.html:183
-msgid "Bakı, Həsən bəy Zərdabi küçəsi, 78B"
-msgstr "Bakü, Hasan bey Zardabi Caddesi, 78B"
+msgstr ""
+"Hırvatistan merkezli küçük indie oyun stüdyosu. Güzel, eğlenceli ve "
+"popüler mobil oyunlar yapmak için 2020 yılında kuruldu."
 
 #: templates/footer.html:118
 msgid "Açıq Saatlar"
@@ -395,10 +398,6 @@ msgstr "AS Rent A Car Baku-Azerbaijan"
 #: templates/index.html:35 templates/index.html:86
 msgid "Baqaj"
 msgstr "Bagaj"
-
-#: templates/index.html:36 templates/index.html:87
-msgid "Çantalar"
-msgstr "Çantalar"
 
 #: templates/index.html:43 templates/index.html:94
 msgid "Mexanika"
@@ -460,7 +459,9 @@ msgstr "Burada ne yazacağımı bilmiyorum"
 
 #: templates/index.html:334
 msgid "Bura bilmirəm nə yazam,Bura bilmirəm nə yazam,Bura bilmirəm nə yazam"
-msgstr "Burada ne yazacağımı bilmiyorum, Burada ne yazacağımı bilmiyorum, Burada ne yazacağımı bilmiyorum"
+msgstr ""
+"Burada ne yazacağımı bilmiyorum, Burada ne yazacağımı bilmiyorum, Burada "
+"ne yazacağımı bilmiyorum"
 
 #: templates/menu.html:111
 msgid "Dil"
@@ -484,5 +485,5 @@ msgstr "İngilizce"
 
 #: templates/menu.html:119
 msgid "Pul vahidi"
-msgstr "Para birimi"
+msgstr "Para birimi-"
 

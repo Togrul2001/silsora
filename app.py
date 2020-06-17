@@ -280,7 +280,7 @@ def wewillcallyou(carid,totalPrice,pickdate,dropdate,babyseat):
         mail=request.form.get('mail')
         phone=request.form.get('phone')
         writethisresponse(name,mail,phone,carid,totalPrice,pickdate,dropdate,babyseat)
-        notfication=str(gettext('Salam hörmətli {} . Sizin istəyiniz qeydə alındı ən yaxın zamanda sizinlə əlaqə saxlayacağıq.Bizi seçdiyiniz üçün minnətdarıq.'.format(name)))
+        notfication=str(gettext('Salam hörmətli {} . Sizin istəyiniz qeydə alındı ən yaxın zamanda sizinlə əlaqə saxlayacağıq.Bizi seçdiyiniz üçün minnətdarıq.').format(name))
         return "<script>alert('{}');window.location.href='/cars'</script>".format(notfication)
     return render_template("404.html")
 @app.route("/")
