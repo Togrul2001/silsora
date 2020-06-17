@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-06-17 18:14+0400\n"
-"PO-Revision-Date: 2020-06-17 18:14+0400\n"
+"POT-Creation-Date: 2020-06-17 21:18+0400\n"
+"PO-Revision-Date: 2020-06-17 21:11+0400\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: tr\n"
 "Language-Team: tr <LL@li.org>\n"
@@ -19,19 +19,19 @@ msgstr ""
 "Generated-By: Babel 2.8.0\n"
 
 #: app.py:176
-msgid "Informasiya yanlis daxil edilib"
+msgid "Avtomobilin götürülmə ve buraxılma tarixi yanlış daxil edilib."
 msgstr ""
 
 #: app.py:178
-msgid "Goturulme tarixi ve buraxilma tarixi eyni ola bilmez"
+msgid "Avtomobilin götürülmə ve buraxılma tarixi eyni ola bilməz."
 msgstr ""
 
 #: app.py:180
-msgid "Goturulme tarixi ve ya buraxilma tarixi daxil edilmeyib"
+msgid "Avtomobilin götürülmə ve ya buraxılma tarixi daxil edilməyib."
 msgstr ""
 
 #: app.py:182
-msgid "Buraxilma tarixi Goturulme tarixinden tezdir"
+msgid "Avtomobilin buraxılma tarixi götürülmə tarixindən tezdir."
 msgstr ""
 
 #: app.py:230
@@ -41,7 +41,7 @@ msgstr ""
 #: app.py:284
 msgid ""
 "Salam hörmətli {} . Sizin istəyiniz qeydə alındı ən yaxın zamanda sizinlə"
-" əlaqə saxlayacağıq.Bizi seçdiyiniz üçün minnətdarıq. :)"
+" əlaqə saxlayacağıq.Bizi seçdiyiniz üçün minnətdarıq."
 msgstr ""
 
 #: templates/404.html:17
@@ -50,57 +50,64 @@ msgstr ""
 
 #: templates/404.html:22 templates/menu.html:106
 msgid "Ev"
-msgstr "Ev"
+msgstr ""
 
 #: templates/404.html:23 templates/menu.html:107
 msgid "Maşınlar"
-msgstr "Arabalar"
+msgstr ""
 
 #: templates/404.html:24 templates/menu.html:108
 msgid "Haqqında"
-msgstr "Hakkında"
+msgstr ""
 
 #: templates/404.html:25 templates/footer.html:70 templates/menu.html:109
 msgid "Əlaqə"
-msgstr "İletişim"
+msgstr ""
 
 #: templates/about.html:21
 msgid "Haqqımızda"
-msgstr "Hakkımızda"
-
-#: templates/about.html:22 templates/cars.html:21 templates/contact.html:22
-msgid "Lorem ipsum dolor sit amet consectetur adipisicing elit."
 msgstr ""
 
-#: templates/about.html:39
-msgid "Maşın Firması"
-msgstr "Araba Şirketi"
+#: templates/about.html:22
+msgid ""
+"\n"
+"    \"ASRENTACAR\" Azərbaycanda qeydiyyatdan keçmiş \"GOODVEY MMC\"-nin "
+"(Vöen: 140423121) əmtəə nişanıdır. 2015-ci ildən fəaliyyət göstərən və "
+"Azərbaycan Respublikası, Bakı şəhəri, Tiflis prospekti 1058 ünvanında "
+"qeydiyyatdan keçmiş \"MARSHAL\" rent a car şirkəti www.marshal.az onlayn "
+"sifariş saytından avtomobil icarəsi, transfer, sürücü və eləcə də turizm "
+"xidmətlərini təklif edir."
+msgstr ""
 
-#: templates/about.html:40 templates/about.html:58
+#: templates/about.html:40
+msgid "Maşın Firması"
+msgstr ""
+
+#: templates/about.html:41 templates/about.html:59
 msgid ""
 "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit suscipit, "
 "repudiandae similique\n"
 "              accusantium eius nulla quam laudantium sequi."
 msgstr ""
 
-#: templates/about.html:42 templates/about.html:60
+#: templates/about.html:43 templates/about.html:61
 msgid ""
 "Debitis voluptates corporis saepe molestias tenetur ab quae, quo earum "
 "commodi, laborum dolore, fuga\n"
 "              aliquid delectus cum ipsa?"
 msgstr ""
 
-#: templates/about.html:57
+#: templates/about.html:58
 msgid "Keçmişimiz"
 msgstr ""
 
 #: templates/car.html:27 templates/car.html:139
 msgid "Bağla"
-msgstr "Kapat"
+msgstr ""
 
 #: templates/car.html:46
 msgid "Uşaq oturacağı"
-msgstr "Bebek Koltuğu"
+msgstr ""
 
 #: templates/car.html:47
 msgid "üçün"
@@ -108,23 +115,23 @@ msgstr ""
 
 #: templates/car.html:47 templates/cars.html:54 templates/index.html:144
 msgid "gün"
-msgstr "gün"
+msgstr ""
 
 #: templates/car.html:50 templates/contact.html:43
 msgid "Ad"
-msgstr "İsim"
+msgstr ""
 
 #: templates/car.html:51
 msgid "E-poçt"
-msgstr "E-poçta"
+msgstr ""
 
 #: templates/car.html:52
 msgid "Telefon Nömrəsi"
-msgstr "Telefon Numarası"
+msgstr ""
 
 #: templates/car.html:63
 msgid "Zəng Edin"
-msgstr "Arayın"
+msgstr ""
 
 #: templates/car.html:70
 msgid "və ya"
@@ -132,7 +139,7 @@ msgstr ""
 
 #: templates/car.html:82
 msgid "Bizə zəng etmək üçün klikləyin"
-msgstr "Bizi aramak için dokunun"
+msgstr ""
 
 #: templates/car.html:143
 msgid "Götürülmə tarixi:"
@@ -156,7 +163,7 @@ msgstr ""
 
 #: templates/car.html:186
 msgid "Qapılar:"
-msgstr "Kapılar"
+msgstr ""
 
 #: templates/car.html:190
 msgid "Mühərrik:"
@@ -164,7 +171,7 @@ msgstr ""
 
 #: templates/car.html:197
 msgid "İl:"
-msgstr "Yıl"
+msgstr ""
 
 #: templates/car.html:201
 msgid "Ötürücü:"
@@ -173,7 +180,7 @@ msgstr ""
 #: templates/car.html:203 templates/cars.html:68 templates/index.html:41
 #: templates/index.html:92 templates/index.html:158
 msgid "Avtomatik"
-msgstr "Otomatik"
+msgstr ""
 
 #: templates/car.html:205 templates/cars.html:70 templates/index.html:160
 msgid "Mexanik"
@@ -241,11 +248,15 @@ msgstr ""
 
 #: templates/cars.html:20
 msgid "Kirayə maşınlar üçün"
-msgstr "Kiralık arabalar için"
+msgstr ""
+
+#: templates/cars.html:21 templates/contact.html:22
+msgid "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+msgstr ""
 
 #: templates/cars.html:34
 msgid "Hamısı"
-msgstr "Tümü"
+msgstr ""
 
 #: templates/cars.html:35
 msgid "Sport"
@@ -270,12 +281,12 @@ msgstr ""
 #: templates/cars.html:58 templates/index.html:27 templates/index.html:78
 #: templates/index.html:148
 msgid "Qapılar"
-msgstr "Kapılar"
+msgstr ""
 
 #: templates/cars.html:62 templates/index.html:31 templates/index.html:82
 #: templates/index.html:152
 msgid "Oturacaqlar"
-msgstr "Koltuklar"
+msgstr ""
 
 #: templates/cars.html:66 templates/index.html:39 templates/index.html:90
 #: templates/index.html:156
@@ -285,7 +296,7 @@ msgstr ""
 #: templates/cars.html:74 templates/index.html:47 templates/index.html:98
 #: templates/index.html:164
 msgid "İl"
-msgstr "Yıl"
+msgstr ""
 
 #: templates/cars.html:79
 msgid "Detallar"
@@ -297,11 +308,11 @@ msgstr ""
 
 #: templates/contact.html:21
 msgid "Bizimlə Əlaqə"
-msgstr "Bizimle İletişim"
+msgstr ""
 
 #: templates/contact.html:33
 msgid "Bizimlə Əlaqə Qurun və ya Formu Doldurun"
-msgstr "Bizimle iletişim kurun ve ya Formu doldurun"
+msgstr ""
 
 #: templates/contact.html:34
 msgid ""
@@ -312,15 +323,15 @@ msgstr ""
 
 #: templates/contact.html:46
 msgid "Soyad"
-msgstr "Soyad"
+msgstr ""
 
 #: templates/contact.html:52
 msgid "E-poçt ünvanı"
-msgstr "E-poçta adresi"
+msgstr ""
 
 #: templates/contact.html:57
 msgid "Telefon nömrəsi"
-msgstr "Telefon numarası"
+msgstr ""
 
 #: templates/contact.html:63
 msgid "Mesajınızı bura yazın"
@@ -328,7 +339,7 @@ msgstr ""
 
 #: templates/contact.html:69
 msgid "Mesajı Göndər"
-msgstr "Mesajınızı Gönderiniz"
+msgstr ""
 
 #: templates/contact.html:76
 msgid "Əlaqə Məlumatı"
@@ -336,15 +347,15 @@ msgstr ""
 
 #: templates/contact.html:80
 msgid "Ünvan:"
-msgstr "Adress:"
+msgstr ""
 
 #: templates/contact.html:84
 msgid "Telefon:"
-msgstr "Numara"
+msgstr ""
 
 #: templates/contact.html:87
 msgid "E-poçt:"
-msgstr "E-poçta:"
+msgstr ""
 
 #: templates/footer.html:16
 msgid ""
@@ -353,19 +364,27 @@ msgid ""
 "            beautiful, fun and popular mobile games."
 msgstr ""
 
-#: templates/footer.html:121
+#: templates/footer.html:76 templates/menu.html:24 templates/menu.html:183
+msgid "Bakı, Həsən bəy Zərdabi küçəsi, 78B"
+msgstr ""
+
+#: templates/footer.html:118
 msgid "Açıq Saatlar"
 msgstr ""
 
-#: templates/footer.html:136
+#: templates/footer.html:122 templates/menu.html:52
+msgid "Bazar ertəsi - Cümə : 09:00 - 00:00"
+msgstr ""
+
+#: templates/footer.html:133
 msgid "Copyright"
 msgstr ""
 
-#: templates/footer.html:138
+#: templates/footer.html:135
 msgid "Bütün Hüquqlar Qorunur"
 msgstr ""
 
-#: templates/footer.html:138
+#: templates/footer.html:135
 msgid "Team"
 msgstr ""
 

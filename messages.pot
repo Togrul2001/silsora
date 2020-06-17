@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-06-17 18:56+0400\n"
+"POT-Creation-Date: 2020-06-17 21:18+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -67,29 +67,36 @@ msgstr ""
 msgid "Haqqımızda"
 msgstr ""
 
-#: templates/about.html:22 templates/cars.html:21 templates/contact.html:22
-msgid "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+#: templates/about.html:22
+msgid ""
+"\n"
+"    \"ASRENTACAR\" Azərbaycanda qeydiyyatdan keçmiş \"GOODVEY MMC\"-nin "
+"(Vöen: 140423121) əmtəə nişanıdır. 2015-ci ildən fəaliyyət göstərən və "
+"Azərbaycan Respublikası, Bakı şəhəri, Tiflis prospekti 1058 ünvanında "
+"qeydiyyatdan keçmiş \"MARSHAL\" rent a car şirkəti www.marshal.az onlayn "
+"sifariş saytından avtomobil icarəsi, transfer, sürücü və eləcə də turizm "
+"xidmətlərini təklif edir."
 msgstr ""
 
-#: templates/about.html:39
+#: templates/about.html:40
 msgid "Maşın Firması"
 msgstr ""
 
-#: templates/about.html:40 templates/about.html:58
+#: templates/about.html:41 templates/about.html:59
 msgid ""
 "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit suscipit, "
 "repudiandae similique\n"
 "              accusantium eius nulla quam laudantium sequi."
 msgstr ""
 
-#: templates/about.html:42 templates/about.html:60
+#: templates/about.html:43 templates/about.html:61
 msgid ""
 "Debitis voluptates corporis saepe molestias tenetur ab quae, quo earum "
 "commodi, laborum dolore, fuga\n"
 "              aliquid delectus cum ipsa?"
 msgstr ""
 
-#: templates/about.html:57
+#: templates/about.html:58
 msgid "Keçmişimiz"
 msgstr ""
 
@@ -242,6 +249,10 @@ msgstr ""
 msgid "Kirayə maşınlar üçün"
 msgstr ""
 
+#: templates/cars.html:21 templates/contact.html:22
+msgid "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+msgstr ""
+
 #: templates/cars.html:34
 msgid "Hamısı"
 msgstr ""
@@ -352,19 +363,27 @@ msgid ""
 "            beautiful, fun and popular mobile games."
 msgstr ""
 
-#: templates/footer.html:121
+#: templates/footer.html:76 templates/menu.html:24 templates/menu.html:183
+msgid "Bakı, Həsən bəy Zərdabi küçəsi, 78B"
+msgstr ""
+
+#: templates/footer.html:118
 msgid "Açıq Saatlar"
 msgstr ""
 
-#: templates/footer.html:136
+#: templates/footer.html:122 templates/menu.html:52
+msgid "Bazar ertəsi - Cümə : 09:00 - 00:00"
+msgstr ""
+
+#: templates/footer.html:133
 msgid "Copyright"
 msgstr ""
 
-#: templates/footer.html:138
+#: templates/footer.html:135
 msgid "Bütün Hüquqlar Qorunur"
 msgstr ""
 
-#: templates/footer.html:138
+#: templates/footer.html:135
 msgid "Team"
 msgstr ""
 
