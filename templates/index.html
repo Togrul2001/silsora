@@ -24,33 +24,33 @@
                 <h3>{{car['car_name']}}</h3>
                 <ul class="list-unstyled">
                   <li>
-                    <span>Doors</span>
+                    <span>{{_('Qapılar')}}</span>
                     <span class="spec">{{car['car_name']}}</span>
                   </li>
                   <li>
-                    <span>Seats</span>
+                    <span>{{_('Oturacaqlar')}}</span>
                     <span class="spec">{{car['seat']}}</span>
                   </li>
                   <li>
-                    <span>Lugage</span>
-                    <span class="spec">{{car['bagage']}} Bags</span>
+                    <span>{{_('Baqaj')}}</span>
+                    <span class="spec">{{car['bagage']}} {{_('Çantalar')}}</span>
                   </li>
                   <li>
-                    <span>Transmission</span>
+                    <span>{{_('Ötürücü')}}</span>
                     {%if car["transmision"]==0%}
-                    <span class="spec">Automatic</span>
+                    <span class="spec">{{_('Avtomatik')}}</span>
                     {% elif car["transmision"]==1%}
-                    <span class="spec">Mechanic</span>
+                    <span class="spec">{{_('Mexanika')}}</span>
                     {%endif%}
                   </li>
                   <li>
-                    <span>Year</span>
+                    <span>{{_('İl')}}</span>
                     <span class="spec">{{car['year']}}</span>
                   </li>
                 </ul>
                 <div class="d-flex align-items-center bg-light p-3">
-                  <span><span class="itiscurrency">{{car['days']['2_3']}}     </span><span class="itiscurrencyname">AZN</span> /day</span>
-                  <a href="{{ url_for('car',id=car['id'])}}" class="ml-auto btn btn-primary">Rent Now</a>
+                  <span><span class="itiscurrency">{{car['days']['2_3']}}     </span><span class="itiscurrencyname">AZN</span> {{_('/gün')}}</span>
+                  <a href="{{ url_for('car',id=car['id'])}}" class="ml-auto btn btn-primary">{{_('İcarəyə götür')}}</a>
                 </div>
               </div>
             </div>
@@ -75,33 +75,33 @@
                 <h3>{{cars[0]['car_name']}}</h3>
                 <ul class="list-unstyled">
                   <li>
-                    <span>Doors</span>
+                    <span>{{_('Qapılar')}}</span>
                     <span class="spec">{{cars[0]['car_name']}}</span>
                   </li>
                   <li>
-                    <span>Seats</span>
+                    <span>{{_('Oturacaqlar')}}</span>
                     <span class="spec">{{cars[0]['seat']}}</span>
                   </li>
                   <li>
-                    <span>Lugage</span>
-                    <span class="spec">{{cars[0]['bagage']}}2 Bags</span>
+                    <span>{{_('Baqaj')}}</span>
+                    <span class="spec">{{cars[0]['bagage']}}{{_('Çantalar')}}</span>
                   </li>
                   <li>
-                    <span>Transmission</span>
+                    <span>{{_('Ötürücü')}}</span>
                     {%if car["transmision"]==0%}
-                    <span class="spec">Automatic</span>
+                    <span class="spec">{{_('Avtomatik')}}</span>
                     {% elif car["transmision"]==1%}
-                    <span class="spec">Mechanic</span>
+                    <span class="spec">{{_('Mexanika')}}</span>
                     {%endif%}
                   </li>
                   <li>
-                    <span>Year</span>
+                    <span>{{_('İl')}}</span>
                     <span class="spec">{{cars[0]['year']}}</span>
                   </li>
                 </ul>
                 <div class="d-flex align-items-center bg-light p-3">
-                  <span><span class="itiscurrency">{{car['days']['2_3']}}     </span><span class="itiscurrencyname">AZN</span> /day</span>
-                  <a href="{{ url_for('car',id=car['id'])}}" class="ml-auto btn btn-primary">Rent Now</a>
+                  <span><span class="itiscurrency">{{car['days']['2_3']}}     </span><span class="itiscurrencyname">AZN</span> {{_('/gün')}}</span>
+                  <a href="{{ url_for('car',id=car['id'])}}" class="ml-auto btn btn-primary">{{_('İcarəyə götür')}}</a>
                 </div>
               </div>
             </div>
@@ -116,17 +116,16 @@
     <div class="site-section bg-light">
       <div class="container">
         <div id="show-all" class="container">
-          <a href="{{ url_for('cars') }}"><button>Show All Cars</button></a>
+          <a href="{{ url_for('cars') }}"><button>{{_('Bütün Maşınları Göstər')}}</button></a>
         </div>
         <div class="row">
           <div class="col-lg-3">
-            <h3>Our Offer</h3>
-            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure nesciunt nemo vel earum
-              maxime neque!</p>
+            <h3>{{_('Bizim Təklifimiz')}}</h3>
+            <p class="mb-4">{{_('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure nesciunt nemo vel earum maxime neque!')}}</p>
             <p>
-              <a href="#" class="btn btn-primary custom-prev">Previous</a>
+              <a href="#" class="btn btn-primary custom-prev">{{_('Geri')}}</a>
               <span class="mx-2">/</span>
-              <a href="#" class="btn btn-primary custom-next">Next</a>
+              <a href="#" class="btn btn-primary custom-next">{{_('İrəli')}}</a>
             </p>
           </div>
           <div class="col-lg-9">
@@ -142,32 +141,32 @@
                 <div class="item-1-contents">
                   <div class="text-center">
                     <h3><a href="#">{{car['car_name']}} </a></h3>
-                    <div class="rent-price"><span><span class="itiscurrency">{{car['days']['2_3']}}     </span><span class="itiscurrencyname">AZN</span> /</span>day</div>
+                    <div class="rent-price"><span><span class="itiscurrency">{{car['days']['2_3']}}     </span><span class="itiscurrencyname">AZN</span> /</span>{{_('gün')}}</div>
                   </div>
                   <ul class="specs">
                     <li>
-                      <span>Doors</span>
+                      <span>{{_('Qapılar')}}</span>
                       <span class="spec">{{car['doors']}}</span>
                     </li>
                     <li>
-                      <span>Seats</span>
+                      <span>{{_('Oturacaqlar')}}</span>
                       <span class="spec">{{car['seat']}}</span>
                     </li>
                     <li>
-                      <span>Transmission</span>
+                      <span>{{_('Ötürücü')}}</span>
                       {%if car["transmision"]==0%}
-                    <span class="spec">Automatic</span>
+                    <span class="spec">{{_('Avtomatik')}}</span>
                     {% elif car["transmision"]==1%}
-                    <span class="spec">Mechanic</span>
+                    <span class="spec">{{_('Mexanik')}}</span>
                     {%endif%}
                     </li>
                     <li>
-                      <span>Year</span>
+                      <span>{{_('İl')}}</span>
                       <span class="spec">{{car['year']}}</span>
                     </li>
                   </ul>
                   <div class="d-flex action">
-                    <a href="{{ url_for('car',id=car['id'])}}" class="btn btn-primary">Rent Now</a>
+                    <a href="{{ url_for('car',id=car['id'])}}" class="btn btn-primary">{{_('İcarəyə götür')}}</a>
                   </div>
                 </div>
               </div>
@@ -187,7 +186,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12 text-center mb-5">
-            <h2 class="text-white">Our services</h2>
+            <h2 class="text-white">{{_('Bizim Xidmətlərimiz')}}</h2>
           </div>
         </div>
         <div id="services" class="row">
@@ -309,8 +308,8 @@
                   </svg></span>
               </span>
               <div class="service-1-contents">
-                <h3>Turlar</h3>
-                <p>Şəhər və rayon turlarının təşkili</p>
+                <h3>{{_('Turlar')}}</h3>
+                <p>{{_('Şəhər və rayon turlarının təşkili')}}</p>
               </div>
             </div>
           </div>
@@ -320,8 +319,8 @@
                 <span class="flaticon-traffic"></span>
               </span>
               <div class="service-1-contents">
-                <h3>Avtomobil icarəsi</h3>
-                <p>Hər növ avtomobillərin günlük,həftəlik,aylıq icarəsi</p>
+                <h3>{{_('Avtomobil icarəsi')}}</h3>
+                <p>{{_('Hər növ avtomobillərin günlük,həftəlik,aylıq icarəsi')}}</p>
               </div>
             </div>
           </div>
@@ -331,8 +330,8 @@
                 <span class="flaticon-valet"></span>
               </span>
               <div class="service-1-contents">
-                <h3>Bura bilmirəm nə yazam</h3>
-                <p>Bura bilmirəm nə yazam,Bura bilmirəm nə yazam,Bura bilmirəm nə yazam</p>
+                <h3>{{_('Bura bilmirəm nə yazam')}}</h3>
+                <p>{{_('Bura bilmirəm nə yazam,Bura bilmirəm nə yazam,Bura bilmirəm nə yazam')}}</p>
               </div>
             </div>
           </div>

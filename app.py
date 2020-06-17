@@ -156,13 +156,13 @@ def cheking(pick,drop):
     total=str(pick)+str(drop)
     print(total)
     if dataNowDays(pick):
-        return "Informasiya yanlis daxil edilib",False
+        return str(gettext('Informasiya yanlis daxil edilib')), False
     elif str(pick)==str(drop):
-        return "Goturulme tarixi ve buraxilma tarixi eyni ola bilmez",False
+        return str(gettext('Goturulme tarixi ve buraxilma tarixi eyni ola bilmez')), False
     elif len(total)<19:
-        return "Goturulme tarixi ve ya buraxilma tarixi daxil edilmeyib",False
+        return str(gettext('Goturulme tarixi ve ya buraxilma tarixi daxil edilmeyib')), False
     elif totalDays(drop,pick)<0:
-        return "Buraxilma tarixi Goturulme tarixinden tezdir",False
+        return str(gettext('Buraxilma tarixi Goturulme tarixinden tezdir')), False
     return "",True
 
 def calPrice(pick,drop,baby,id,carss):
