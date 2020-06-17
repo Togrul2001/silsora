@@ -9,6 +9,12 @@ import os
 app = Flask(__name__)
 app.config['BABEL_DEFAULT_LOCALE']='az'
 babel=Babel(app)
+def  getCountry():
+    url = 'http://ipinfo.io/json'
+    response = urlopen(url)
+    data = json.load(response)
+    country=data['country']
+    return country.islower()
 @babel.localeselector
 def get_local():
     lang=request.cookies.get('language')
@@ -21,7 +27,18 @@ def get_local():
     elif lang=='az':
         return "az"
     else:
-        return request.accept_languages.best_match(["en","ru","tr","az"])
+        if getCountry()=="en":
+            return 'en'
+        elif getCountry()=='ru':
+            return 'ru'
+        elif getCountry()=='tr':
+            return 'tr'
+        elif getCountry()=='az':
+            return "az"
+        else:
+            return 'en'
+
+            
 
 def getObject():
      with open("cars.json","r") as file:
