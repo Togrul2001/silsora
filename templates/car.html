@@ -42,15 +42,9 @@
 
                 <div class="details">
                     <br>
-<<<<<<< HEAD
                     <form action="{{ url_for('wewillcallyou',carid=car['id'],totalPrice=totalPrice,pickdate=pick,dropdate=drop,babyseat=totalBaby)}}" method="post" class="column">
                         <h1>{{car['car_name']}}{% if totalBaby %} + {{_('Uşaq oturacağı')}} {% endif%}</h1>
                         <p class="price"><span class="itiscurrency">{{totalPrice}}     </span> <span class="itiscurrencyname">AZN</span>  {{_('üçün')}} {{totalDays}} {{_('gün')}} </p>
-=======
-                    <form action="{{ url_for('wewillcallyou',carid=car['id'],totalprice=totalPrice)}}" method="post" class="column">
-                    <h1>{{car['car_name']}}{% if totalBaby %} + {{_('Uşaq oturacağı')}} {% endif%}</h1>
-                    <p class="price"><span class="itiscurrency">{{totalPrice}}     </span> <span class="itiscurrencyname">AZN</span>  {{_('üçün')}} {{totalDays}} {{_('gün')}} </p>
->>>>>>> 691bf5bde73de1a7af698c1258d3901e801a1285
 
                     <div id="inputs">
                         <input required type="text" name="name" placeholder=" {{_('Ad')}} ">
