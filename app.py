@@ -15,7 +15,7 @@ def  getCountry():
     response = urlopen(url)
     data = json.load(response)
     country=data['country']
-    return country.islower()
+    return country
 @babel.localeselector
 def get_local():
     lang=request.cookies.get('language')
@@ -29,16 +29,16 @@ def get_local():
         return "az"
     else:
         lang=getCountry()
-        if lang =="en":
-            return 'en'
-        elif lang=='ru':
+        if lang =="AZ":
+            return 'az'
+        elif lang=='RU':
             return 'ru'
-        elif lang=='tr':
+        elif lang=='TR':
             return 'tr'
-        elif lang=='az':
-            return "az"
+        elif lang=='US':
+            return "en"
         else:
-            return 'en'
+            return request.accept_languages.best_match(['az','ru','tr',"en"])
 
             
 
@@ -229,6 +229,17 @@ def takemessage():
         notfication=str(gettext('Sizin mesajınız uğurlu şəkildə göndərildi !'))
         return "<script>alert('{}');window.location.href='/contact'</script>".format(notfication)
     return render_template("404.html")
+# getting cars info with token
+# getting cars info with token
+@app.route('/messages')
+def gettoken():
+    auth=request.authorization
+    if auth and auth.password=='password' and auth.username=='username':
+        return jsonify(getJsonFile("static/messages/messages.json"))
+    return make_response('Coudnt verify',401,{'WWW-Authenticate':'Basic realm="Login Required"'})
+# getting cars info with token
+# getting cars info with token
+
 @app.route("/calc/<int:id>",methods=["POST"])
 def calc(id):
     website=getJsonFile("static/site/website.json")
