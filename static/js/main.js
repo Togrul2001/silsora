@@ -373,7 +373,7 @@
  		$("html").css({
  			"overflow": "auto"
  		});
- 	}, 0);
+ 	}, 2);
  	if(Cookies.get("currency")){
 		$("#money .currency").val(Cookies.get("currency"));
 		
