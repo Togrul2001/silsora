@@ -207,9 +207,12 @@ def writethismessage(firstname,lastname,email,phone,message):
     with open("static/messages/messages.json","r" , encoding='utf8') as file:
         data=file.read()
         file.close()
+        print(data)
+        time=str(datetime.datetime.now())
+
         data=eval(data)
         amessage={
-            'date':datetime.datetime.now(),
+            'date':time,
             "firstname":firstname,
             "lastname":lastname,
             "email":email,
@@ -281,9 +284,9 @@ def writethisresponse(fullname,mail,phone,carid,totalPrice,pickdate,dropdate,bab
         data=file.read()
         file.close()
         data=eval(data)
-        print(data)
+        time=str(datetime.datetime.now())
         amessage={
-            'date':datetime.datetime.now(),
+            'date':time,
             "fullname":fullname,
             "mail":mail,
             "phone":phone,
