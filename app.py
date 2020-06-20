@@ -4,6 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 import random
 from datetime import date
+import datetime 
 from flask_babel import Babel,_,gettext
 import os
 from urllib.request import urlopen
@@ -208,6 +209,7 @@ def writethismessage(firstname,lastname,email,phone,message):
         file.close()
         data=eval(data)
         amessage={
+            'date':datetime.datetime.now(),
             "firstname":firstname,
             "lastname":lastname,
             "email":email,
@@ -229,17 +231,28 @@ def takemessage():
         notfication=str(gettext('Sizin mesajınız uğurlu şəkildə göndərildi !'))
         return "<script>alert('{}');window.location.href='/contact'</script>".format(notfication)
     return render_template("404.html")
-# getting cars info with token
-# getting cars info with token
+# getting messages info with token
+# getting messages info with token
 @app.route('/messages')
 def gettoken():
     auth=request.authorization
     if auth and auth.password=='password' and auth.username=='username':
+        print(auth)
         return jsonify(getJsonFile("static/messages/messages.json"))
     return make_response('Coudnt verify',401,{'WWW-Authenticate':'Basic realm="Login Required"'})
-# getting cars info with token
-# getting cars info with token
+# getting messages info with token
+# getting messages info with token
 
+# getting responses info with token
+# getting responses info with token
+@app.route('/responses')
+def getresponses():
+    auth=request.authorization
+    if auth and auth.password=='password' and auth.username=='username':
+        return jsonify(getJsonFile("static/responses/carresponses.json"))
+    return make_response('Coudnt verify',401,{'WWW-Authenticate':'Basic realm="Login Required"'})
+# getting responses info with token
+# getting responses info with token
 @app.route("/calc/<int:id>",methods=["POST"])
 def calc(id):
     website=getJsonFile("static/site/website.json")
@@ -270,6 +283,7 @@ def writethisresponse(fullname,mail,phone,carid,totalPrice,pickdate,dropdate,bab
         data=eval(data)
         print(data)
         amessage={
+            'date':datetime.datetime.now(),
             "fullname":fullname,
             "mail":mail,
             "phone":phone,
