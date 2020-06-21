@@ -7,25 +7,24 @@ from datetime import date
 import datetime 
 from flask_babel import Babel,_,gettext
 import os
+from time import sleep 
 from urllib.request import urlopen
 app = Flask(__name__)
 app.config['BABEL_DEFAULT_LOCALE']='az'
 babel=Babel(app)
 def  getCountry():
-    url = 'http://ipinfo.io/json'
-    response = urlopen(url)
-    data = json.load(response)
-    country=data['country']
+    try:
+        url = 'http://ipinfo.io/json'
+        response = urlopen(url)
+        data = json.load(response)
+        country=data['country']
+    except Exception as ex:
+        sleep(5)
+        return "EN"
     return country
-def  getuserinfo():
-    url = 'http://ipinfo.io/json'
-    response = urlopen(url)
-    data = json.load(response)
-   
-    return data
+
 @babel.localeselector
 def get_local():
-    print(getuserinfo())
     lang=request.cookies.get('language')
     if lang=="en":
         return 'en'
@@ -282,8 +281,9 @@ def calc(id):
     return render_template("404.html")
 @app.route("/contact")
 def contact():
+    pullar=getJsonFile("static/currency/currency.json")
     website=getJsonFile("static/site/website.json")
-    return render_template("contact.html",website=website)
+    return render_template("contact.html",website=website,moneys=pullar)
 def writethisresponse(fullname,mail,phone,carid,totalPrice,pickdate,dropdate,babyseat):
     with open("static/responses/carresponses.json","r",encoding='utf8') as file:
         data=file.read()

@@ -373,7 +373,11 @@
  		$("html").css({
  			"overflow": "auto"
 		 });
-		 document.getElementById("delete-gif").src = "hackanm.gif";
+		 $("#delete-gif").css(
+			 {
+				 "display":"none"
+			 }
+		 );
 		 
  	}, 2);
  	if(Cookies.get("currency")){

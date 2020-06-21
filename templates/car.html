@@ -1,7 +1,14 @@
 <!doctype html>
 <html lang="en">
 
-{% include "head.html" %}
+    <head>
+        {%for car in cars%}
+        {% if car['id']== id %}
+        <title>{{_('Rent a ')}} {{car['car_name']}}</title>
+        {% endif%}
+        {% endfor %}
+        {% include "head.html" %}
+    </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
@@ -117,7 +124,7 @@
                 <div class="container">
                     <div style="height: auto!important;" class="row align-items-center justify-content-center">
                         <div id="name-and-car">
-                            <div id="car-name"><a href="#">{{car['car_name']}}</a></div>
+                            <div id="car-name"><h1><a href="#">{{car['car_name']}}</a></h1></div>
                             <div id="a-car">
 
                                 <div class="side">
