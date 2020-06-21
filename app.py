@@ -19,7 +19,7 @@ def  getCountry():
         data = json.load(response)
         country=data['country']
     except Exception as ex:
-        sleep(5)
+        sleep(1)
         return "EN"
     return country
 

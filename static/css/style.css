@@ -1241,6 +1241,9 @@ h1, h2, h3, h4, h5,
     .ftco-cover-1.overlay h1 {
       color: #fff;
       font-size: 3rem; }
+      .ftco-cover-1.overlay h2 {
+        color: #fff;
+        font-size: 1rem; }
     .ftco-cover-1.overlay p {
       color: #fff; }
       .ftco-cover-1.overlay p a {
