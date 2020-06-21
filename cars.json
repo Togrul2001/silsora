@@ -21,12 +21,12 @@
         "bluetooth": false,
         "oil": 1,
         "km": 1700,
-        "photo_links": "images/cars/carid1.jpeg",
+        "photo_links": "images/cars/carid1.webp",
         "links": [
-            "images/cars/carid1.jpeg",
-            "images/cars/car2id1.jpeg",
-            "images/cars/carid3.jpeg",
-            "images/cars/carid4.jpeg"
+            "images/cars/carid1.webp",
+            "images/cars/car2id1.webp",
+            "images/cars/carid3.webp",
+            "images/cars/carid4.webp"
         ]
 
     },
@@ -53,12 +53,12 @@
         "bluetooth": true,
         "oil": "gasoline",
         "km": 100,
-        "photo_links": "images/cars/carid2.jpeg",
+        "photo_links": "images/cars/carid2.webp",
         "links": [
-            "images/cars/carid2.jpeg",
-            "images/cars/car2id2.jpeg",
-            "images/cars/carid3.jpeg",
-            "images/cars/carid4.jpeg"
+            "images/cars/carid2.webp",
+            "images/cars/car2id2.webp",
+            "images/cars/carid3.webp",
+            "images/cars/carid4.webp"
         ]
 
     },
@@ -85,12 +85,12 @@
         "bluetooth": true,
         "oil": "gasoline",
         "km": 600,
-        "photo_links": "images/cars/carid3.jpeg",
+        "photo_links": "images/cars/carid3.webp",
         "links": [
-            "images/cars/carid1.jpeg",
-            "images/cars/carid2.jpeg",
-            "images/cars/carid3.jpeg",
-            "images/cars/carid4.jpeg"
+            "images/cars/carid1.webp",
+            "images/cars/carid2.webp",
+            "images/cars/carid3.webp",
+            "images/cars/carid4.webp"
         ]
 
     },
@@ -118,12 +118,12 @@
         "bluetooth": false,
         "oil": 1,
         "km": 450,
-        "photo_links": "images/cars/carid4.jpeg",
+        "photo_links": "images/cars/carid4.webp",
         "links": [
-            "images/cars/carid1.jpeg",
-            "images/cars/carid2.jpeg",
-            "images/cars/carid3.jpeg",
-            "images/cars/carid4.jpeg"
+            "images/cars/carid1.webp",
+            "images/cars/carid2.webp",
+            "images/cars/carid3.webp",
+            "images/cars/carid4.webp"
         ]
     },
     {
@@ -149,12 +149,12 @@
         "bluetooth": false,
         "oil": 1,
         "km": 1700,
-        "photo_links": "images/cars/carid5.jpeg",
+        "photo_links": "images/cars/carid5.webp",
         "links": [
-            "images/cars/carid1.jpeg",
-            "images/cars/carid2.jpeg",
-            "images/cars/carid3.jpeg",
-            "images/cars/carid4.jpeg"
+            "images/cars/carid1.webp",
+            "images/cars/carid2.webp",
+            "images/cars/carid3.webp",
+            "images/cars/carid4.webp"
         ]
     },
     {
@@ -180,12 +180,12 @@
         "bluetooth": true,
         "oil": 1,
         "km": 1700,
-        "photo_links": "images/cars/carid6.jpeg",
+        "photo_links": "images/cars/carid6.webp",
         "links": [
-            "images/cars/carid6.jpeg",
-            "images/cars/car2id6.jpeg",
-            "images/cars/carid3.jpeg",
-            "images/cars/carid4.jpeg"
+            "images/cars/carid6.webp",
+            "images/cars/car2id6.webp",
+            "images/cars/carid3.webp",
+            "images/cars/carid4.webp"
         ]
     },
     {
@@ -211,12 +211,12 @@
         "oil": 1,
         "km": 1700,
         "bluetooth": true,
-        "photo_links": "images/cars/carid7.jpeg",
+        "photo_links": "images/cars/carid7.webp",
         "links": [
-            "images/cars/carid7.jpeg",
-            "images/cars/car2id7.jpeg",
-            "images/cars/carid3.jpeg",
-            "images/cars/carid4.jpeg"
+            "images/cars/carid7.webp",
+            "images/cars/car2id7.webp",
+            "images/cars/carid3.webp",
+            "images/cars/carid4.webp"
         ]
     }
 

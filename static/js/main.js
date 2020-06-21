@@ -369,10 +369,12 @@
  	);
 
  	setInterval(() => {
- 		$("#loading").fadeOut("slow");
+		 $("#loading").fadeOut("slow");
  		$("html").css({
  			"overflow": "auto"
- 		});
+		 });
+		 document.getElementById("delete-gif").src = "hackanm.gif";
+		 
  	}, 2);
  	if(Cookies.get("currency")){
 		$("#money .currency").val(Cookies.get("currency"));
