@@ -17,8 +17,15 @@ def  getCountry():
     data = json.load(response)
     country=data['country']
     return country
+def  getuserinfo():
+    url = 'http://ipinfo.io/json'
+    response = urlopen(url)
+    data = json.load(response)
+   
+    return data
 @babel.localeselector
 def get_local():
+    print(getuserinfo())
     lang=request.cookies.get('language')
     if lang=="en":
         return 'en'
@@ -209,7 +216,6 @@ def writethismessage(firstname,lastname,email,phone,message):
         file.close()
         print(data)
         time=str(datetime.datetime.now())
-
         data=eval(data)
         amessage={
             'date':time,
@@ -240,7 +246,6 @@ def takemessage():
 def gettoken():
     auth=request.authorization
     if auth and auth.password=='password' and auth.username=='username':
-        print(auth)
         return jsonify(getJsonFile("static/messages/messages.json"))
     return make_response('Coudnt verify',401,{'WWW-Authenticate':'Basic realm="Login Required"'})
 # getting messages info with token
