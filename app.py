@@ -18,10 +18,10 @@ def  getCountry():
         response = urlopen(url)
         data = json.load(response)
         country=data['country']
+        return country
     except Exception as ex:
         sleep(1)
         return "EN"
-    return country
 
 @babel.localeselector
 def get_local():
