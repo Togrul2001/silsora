@@ -1,1 +1,26 @@
-[]
+[
+       {
+              "id": 1,
+              "car_name": "bmw",
+              "car_type_level": "Sport",
+              "doors": 4,
+              "seat": 5,
+              "engine": 2.5,
+              "transmission": "Avtomatik",
+              "days": {
+                     "1_3": 80,
+                     "4_7": 75,
+                     "8_15": 60,
+                     "16_30": 50,
+                     "30_": 30
+              },
+              "year": 2012,
+              "photo_links": "images/cars/ad12227c-5e67-4e2a-ab9d-9b98c9b6575cbmw1.jpg",
+              "links": [
+                     "images/cars/124529ee-dd36-45a2-823e-9889037df73ebmw2.jpg",
+                     "images/cars/99cf648a-83b0-4b41-abb8-d7839c41be20bmw3.jpg",
+                     "images/cars/70a8094e-9fc1-4eb5-856e-16a49cfb7ab5bmw77.jpg",
+                     "images/cars/e5eba79b-79ca-4c20-b7dc-36b921f2c71dbmw525.jpg"
+              ]
+       }
+]
