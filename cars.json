@@ -22,5 +22,29 @@
                      "images/cars/70a8094e-9fc1-4eb5-856e-16a49cfb7ab5bmw77.jpg",
                      "images/cars/e5eba79b-79ca-4c20-b7dc-36b921f2c71dbmw525.jpg"
               ]
+       },
+       {
+              "id": 2,
+              "car_name": "asdasd",
+              "car_type_level": "Sport",
+              "doors": 4,
+              "seat": 4,
+              "engine": 4.4,
+              "transmission": "Avtomatik",
+              "days": {
+                     "1_3": 4,
+                     "4_7": 4,
+                     "8_15": 4,
+                     "16_30": 4,
+                     "30_": 4
+              },
+              "year": 2019,
+              "photo_links": "images/cars/5fcb3b48-ed38-4f3f-aec9-7b34ae0a6cbfbmw77.jpg",
+              "links": [
+                     "images/cars/49f06f74-52cb-4aea-957e-d43b0f5d5fc2bmw1.jpg",
+                     "images/cars/3548e729-59f5-4343-afa5-5f35aa2ecfbfbmw2.jpg",
+                     "images/cars/b301569b-d367-4239-afb2-a3faa1c0ec24bmw525.jpg",
+                     "images/cars/c767bdc9-217f-41c3-9aed-5da3dd82137bbmwmbf.jpg"
+              ]
        }
 ]
