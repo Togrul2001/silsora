@@ -362,7 +362,7 @@ def show_car(id):
 
 
 @app.route("/adminpanel/addcar")
-def add_car(id):
+def add_car():
     return render_template("adminaddcar.html")
 
 
