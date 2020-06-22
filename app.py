@@ -12,6 +12,7 @@ from urllib.request import urlopen
 app = Flask(__name__)
 app.config['BABEL_DEFAULT_LOCALE']='az'
 babel=Babel(app)
+
 def  getCountry():
     try:
         url = 'http://ipinfo.io/json'
@@ -329,5 +330,54 @@ def index():
 def getcur():
     result=getJsonFile("static/currency/currency.json")
     return jsonify(result)
+
+
+#-------------------------------------------------ADMIN PANEL-----------------------------------------------
+
+
+@app.route("/adminpanel")
+def adminpanel():
+    return render_template("adminpanel.html")
+
+
+@app.route("/adminpanel/cars")
+def show_cars():
+    website = getJsonFile("static/site/website.json")
+    pullar = getJsonFile("static/currency/currency.json")
+    with open("cars.json", "r") as file:
+        data = file.read()
+    obyekt = json.loads(data)
+    return render_template("admincars.html", website=website, pullar=pullar, cars=obyekt)
+
+
+@app.route("/adminpanel/car/<int:id>")
+def show_car(id):
+    website = getJsonFile("static/site/website.json")
+    pullar = getJsonFile("static/currency/currency.json")
+    with open("cars.json", "r") as file:
+        data = file.read()
+        file.close()
+    obyekt = json.loads(data)
+    return render_template("admincar.html", id=id, cars=obyekt, moneys=pullar, website=website)
+
+
+@app.route("/adminpanel/addcar")
+def add_car(id):
+    return render_template("adminaddcar.html")
+
+
+@app.route("/adminpanel/car/<int:id>/edit")
+def car_edit(id):
+    return render_template("admineditcar.html", id=id)
+
+
+@app.route("/adminpanel/cars")
+def show_message():
+    return render_template("admincars.html")
+
+
+#-------------------------------------------------ADMIN PANEL-----------------------------------------------
+
+
 if __name__=="__main__":
     app.run(port=5050,debug=True,host='127.0.0.2')
