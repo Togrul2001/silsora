@@ -9,8 +9,23 @@ from flask_babel import Babel,_,gettext
 import os
 from time import sleep 
 from urllib.request import urlopen
+from wtforms import DateField, BooleanField, IntegerField,Label, ValidationError, validators, FloatField, FormField, Form, FileField, StringField, PasswordField, SubmitField, BooleanField, TextAreaField, SelectField
+from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError, NumberRange
+from flask_wtf.file import FileField, FileAllowed, FileRequired
+from flask_wtf import FlaskForm
+from werkzeug.utils import secure_filename
+import uuid
 app = Flask(__name__)
 app.config['BABEL_DEFAULT_LOCALE']='az'
+app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
+
+UPLOAD_FOLDER = 'static/images/cars/'
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'webp'}
+
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+with open("cars.json", "r") as f:
+    masin=json.load(f)
 babel=Babel(app)
 
 def  getCountry():
@@ -334,6 +349,26 @@ def getcur():
 
 #-------------------------------------------------ADMIN PANEL-----------------------------------------------
 
+class CarForm(FlaskForm):
+    carname = StringField("Masinin Adi", validators=[DataRequired(), Length(min=2, max=20)])
+    cartypelevel = SelectField("Masin Tipi Derece", choices=[('Sport', 'Sport'), ('Business', 'Business'),
+        ('Full-Size', 'Full-Size'), ('Minivan', 'Minivan'), ('Economy', 'Economy')])
+    doors = IntegerField("Qapi Sayi", validators=[NumberRange(min=2, max=15, message='Invalid length')])
+    seat = IntegerField("Oturacaq Sayi", validators=[NumberRange(min=2, max=15, message='Invalid length')])
+    engine = FloatField("Muherrik", validators=[DataRequired()])
+    transmission = SelectField("Ötürücü" ,choices=[('Avtomatik', 'Avtomatik'), ('Mexanik', 'Mexanik')])
+    day_1_3 = IntegerField("1-3 gunluk", validators=[DataRequired()])
+    day_4_7 = IntegerField("4-7 gunluk", validators=[DataRequired()])
+    day_8_15 = IntegerField("8-15 gunluk", validators=[DataRequired()])
+    day_16_30 = IntegerField("16-30 gunluk", validators=[DataRequired()])
+    day_30_ = IntegerField("30+ gunluk", validators=[DataRequired()])
+    year = IntegerField("İl", validators=[DataRequired()])
+    picture = FileField("Sekil", validators=[FileRequired('Bir sekil secin'), FileAllowed(['jpg', 'jfif', 'jpeg'], 'Sadece sekil')])
+    pictures = FileField('Sekiller', validators=[FileRequired(), FileAllowed(['jpg', 'png', 'jfif'], 'Images only!')])
+    submit = SubmitField('Send')
+
+
+
 
 @app.route("/adminpanel")
 def adminpanel():
@@ -361,9 +396,63 @@ def show_car(id):
     return render_template("admincar.html", id=id, cars=obyekt, moneys=pullar, website=website)
 
 
-@app.route("/adminpanel/addcar")
-def add_car(id):
-    return render_template("adminaddcar.html")
+def getObject():
+    with open("cars.json", "r") as file:
+        data = file.read()
+        file.close()
+        obyekt = json.loads(data)
+        return obyekt
+@app.route("/adminpanel/addcar", methods=["GET", "POST"])
+def add_car():
+    form=CarForm()
+    if form.validate_on_submit():
+        print('burdayam')
+        cars=getObject() 
+        maksimum=0
+        for i in cars:
+            try:
+                maksimum = max(i['id'], maksimum)
+            except Exception as ex:
+                print(ex)
+        print(maksimum,"maksimum id")
+        filename = str(uuid.uuid4()) + secure_filename(form.picture.data.filename)
+        form.picture.data.save(app.config['UPLOAD_FOLDER'] + filename)
+        images = request.files.getlist("pictures")
+        image_files = []
+        imagesForJson=[]
+        if images:
+            for img in images:
+                # Create Images
+                file_name = str(uuid.uuid4()) + secure_filename(img.filename)
+                image_file = os.path.join(app.config['UPLOAD_FOLDER'], file_name)
+                imagesForJson.append("images/cars/"+file_name)
+                img.save(image_file)
+                image_files.append(image_file)
+        masinbilgi = {
+            "id":maksimum+1,
+            "car_name" : form.carname.data,
+            "car_type_level" : form.cartypelevel.data,
+            "doors" : form.doors.data,
+            "seat" : form.seat.data,
+            "engine" : form.engine.data,
+            "transmission" : form.transmission.data,
+            "days": {
+                    "1_3": form.day_1_3.data,
+                    "4_7": form.day_4_7.data,
+                    "8_15": form.day_8_15.data,
+                    "16_30": form.day_16_30.data,
+                    "30_": form.day_30_.data
+            },
+            "year" : form.year.data,
+            "photo_links": "images/cars/"+ filename,
+            "links": imagesForJson,
+
+        }
+        cars.append(masinbilgi)
+        with open("cars.json", "w", encoding="utf-8") as file:
+            json.dump(cars, file, indent=7)
+        return redirect(url_for("show_cars"))
+    return render_template("adminaddcar.html", form=form)
 
 
 @app.route("/adminpanel/car/<int:id>/edit")
@@ -371,9 +460,9 @@ def car_edit(id):
     return render_template("admineditcar.html", id=id)
 
 
-@app.route("/adminpanel/cars")
+@app.route("/adminpanel/message")
 def show_message():
-    return render_template("admincars.html")
+    return render_template("adminmessages.html")
 
 
 #-------------------------------------------------ADMIN PANEL-----------------------------------------------
