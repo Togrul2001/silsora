@@ -196,7 +196,7 @@ def calPrice(pick,drop,baby,id,carss):
     for car in carss:
         if car['id']==id:
             if numberDays<4:
-                totalPrice+=numberDays*car['days']['2_3']
+                totalPrice+=numberDays*car['days']['1_3']
             elif numberDays<8:
                 totalPrice+=numberDays*car['days']['4_7']
             elif numberDays<16:
